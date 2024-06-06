@@ -130,6 +130,14 @@ const Provider = ({ children, frames }: ProviderProps) => {
     navigate([...frameStack.slice(0, index), ...frameStack.slice(index + 1)])
   }
 
+  const focus = (index: number) => {
+    navigate([
+      ...frameStack.slice(0, index),
+      ...frameStack.slice(index + 1),
+      frameStack[index],
+    ])
+  }
+
   useEffect(() => {
     const onPopState = ({ state }: PopStateEvent) => {
       if (!state) return
@@ -144,13 +152,13 @@ const Provider = ({ children, frames }: ProviderProps) => {
       {children}
       {frameStack.map(({ frame, params, key }, index) => {
         const { frame: Component } = frames[frame]
-
+        const isActive = index === frameStack.length - 1
         return (
           <Frame
             key={key}
-            state={index === frameStack.length - 1 ? 'active' : 'inactive'}
+            state={isActive ? 'active' : 'inactive'}
             position={{ x: Number(key) * 0.02, y: Number(key) * 0.02 }}
-            onFocus={() => open(frame, params)}
+            onFocus={() => (isActive ? {} : focus(index))}
             onClose={() => close(index)}
           >
             <Component key={key} {...{ params }} />
