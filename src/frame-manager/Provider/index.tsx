@@ -35,6 +35,18 @@ const findSameFrameIndex = (frameStack: FrameNode[], target: FrameNode) =>
       frame.frame === target.frame && isParamsEqual(frame.params, target.params)
   )
 
+const generateFrameNode = (
+  frames: Frames,
+  { frame, params, key }: FrameNode
+) => {
+  const { validator } = frames[frame]
+  return {
+    frame,
+    params: validator ? validator(params) : params,
+    key,
+  }
+}
+
 const getInitialFrameStack = (frames: Frames) => {
   const slug = location.pathname.split('/').slice(1)
   if (!slug.length) return []
@@ -44,11 +56,7 @@ const getInitialFrameStack = (frames: Frames) => {
     return []
   }
   return [
-    {
-      frame,
-      params: slug.slice(1),
-      key: keySeed++,
-    },
+    generateFrameNode(frames, { frame, params: slug.slice(1), key: keySeed++ }),
   ]
 }
 
@@ -82,11 +90,12 @@ const Provider = ({ children, frames }: ProviderProps) => {
 
   const open = (frame: string, params: string[], options?: NavigateOptions) => {
     if (!frames[frame]) throw new Error(`Frame ${frame} not found`)
-    const currentFrame = {
+    const { validator } = frames[frame]
+    const currentFrame = generateFrameNode(frames, {
       frame,
-      params,
+      params: validator ? validator(params) : params,
       key: keySeed++,
-    }
+    })
     const sameFrameIndex = findSameFrameIndex(frameStack, currentFrame)
 
     if (sameFrameIndex === -1)
@@ -103,13 +112,15 @@ const Provider = ({ children, frames }: ProviderProps) => {
   }
 
   const transition = (params: string[], options?: NavigateOptions) => {
+    const currentFrame = frameStack[frameStack.length - 1]
+    const { validator } = frames[currentFrame.frame]
     navigate(
       [
         ...frameStack.slice(0, frameStack.length - 1),
-        {
-          ...frameStack[frameStack.length - 1],
-          params,
-        },
+        generateFrameNode(frames, {
+          ...currentFrame,
+          params: validator ? validator(params) : params,
+        }),
       ],
       options
     )
@@ -132,27 +143,17 @@ const Provider = ({ children, frames }: ProviderProps) => {
     <FrameContext.Provider value={{ open, transition }}>
       {children}
       {frameStack.map(({ frame, params, key }, index) => {
-        const { frame: Component, validator } = frames[frame]
+        const { frame: Component } = frames[frame]
 
         return (
           <Frame
             key={key}
             state={index === frameStack.length - 1 ? 'active' : 'inactive'}
-            position={{ x: Number(key) * 0.1, y: Number(key) * 0.1 }}
+            position={{ x: Number(key) * 0.02, y: Number(key) * 0.02 }}
             onFocus={() => open(frame, params)}
             onClose={() => close(index)}
           >
-            <Component
-              key={key}
-              {...(validator
-                ? (() => {
-                    const validParams = validator(params)
-                    if (!isParamsEqual(params, validParams))
-                      transition(validParams, { replace: true })
-                    return { params: validParams }
-                  })()
-                : { params })}
-            />
+            <Component key={key} {...{ params }} />
           </Frame>
         )
       })}

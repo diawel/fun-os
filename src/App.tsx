@@ -13,9 +13,7 @@ const App = () => {
         },
       }}
     >
-      <Open frame="counter" params={['0']}>
-        Open Counter
-      </Open>
+      <Open frame="counter">Open Counter</Open>
     </Provider>
   )
 }
