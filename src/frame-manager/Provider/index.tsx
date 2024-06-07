@@ -55,9 +55,17 @@ const getInitialFrameStack = (frames: Frames) => {
     window.history.replaceState({ frameStack: [] }, '', '/')
     return []
   }
-  return [
-    generateFrameNode(frames, { frame, params: slug.slice(1), key: keySeed++ }),
-  ]
+  const frameNode = generateFrameNode(frames, {
+    frame,
+    params: slug.slice(1),
+    key: keySeed++,
+  })
+  window.history.replaceState(
+    { frameStack: [frameNode] },
+    '',
+    `/${frame}/${frameNode.params.join('/')}`
+  )
+  return [frameNode]
 }
 
 type ProviderProps = {
