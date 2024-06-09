@@ -12,6 +12,7 @@ type FrameNode = {
   frame: string
   params: string[]
   key: Attributes['key']
+  position: { x: number; y: number }
 }
 type Frames = {
   [key: string]: {
@@ -37,13 +38,14 @@ const findSameFrameIndex = (frameStack: FrameNode[], target: FrameNode) =>
 
 const generateFrameNode = (
   frames: Frames,
-  { frame, params, key }: FrameNode
+  { frame, params, key, position }: FrameNode
 ) => {
   const { validator } = frames[frame]
   return {
     frame,
     params: validator ? validator(params) : params,
     key,
+    position,
   }
 }
 
@@ -60,6 +62,7 @@ const getInitialFrameStack = (frames: Frames) => {
     frame,
     params: slug.slice(1),
     key: keySeed++,
+    position: { x: 0.05, y: 0.05 },
   })
   window.history.replaceState(
     { frameStack: [frameNode] },
@@ -104,6 +107,16 @@ const Provider = ({ children, frames }: ProviderProps) => {
       frame,
       params: validator ? validator(params) : params,
       key: keySeed++,
+      position: frameStack.length
+        ? {
+            x:
+              ((frameStack[frameStack.length - 1].position.x - 0.03) % 0.9) +
+              0.05,
+            y:
+              ((frameStack[frameStack.length - 1].position.y - 0.03) % 0.9) +
+              0.05,
+          }
+        : { x: 0.05, y: 0.05 },
     })
     const sameFrameIndex = findSameFrameIndex(frameStack, currentFrame)
 
@@ -159,16 +172,16 @@ const Provider = ({ children, frames }: ProviderProps) => {
   return (
     <FrameContext.Provider value={{ open, transition }}>
       {children}
-      {frameStack.map(({ frame, params, key }, index) => {
+      {frameStack.map(({ frame, params, key, position }, index) => {
         const { frame: Component } = frames[frame]
         const isActive = index === frameStack.length - 1
         return (
           <Frame
             key={key}
             state={isActive ? 'active' : 'inactive'}
-            position={{ x: Number(key) * 0.02, y: Number(key) * 0.02 }}
             onFocus={() => (isActive ? {} : focus(index))}
             onClose={() => close(index)}
+            {...{ position }}
           >
             <Component key={key} {...{ params }} />
           </Frame>
