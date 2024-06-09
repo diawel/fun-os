@@ -47,8 +47,9 @@ const generateFrameNode = (
   }
 }
 
+const slug = location.pathname.split('/').slice(1)
 const getInitialFrameStack = (frames: Frames) => {
-  const slug = location.pathname.split('/').slice(1)
+  if (history.state?.frameStack) return []
   if (!slug.length) return []
   const frame = slug[0]
   if (!frames[frame]) {
