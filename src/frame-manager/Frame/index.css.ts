@@ -1,4 +1,4 @@
-import { style, styleVariants } from '@vanilla-extract/css'
+import { style, styleVariants, globalStyle } from '@vanilla-extract/css'
 
 const frameBase = style({
   position: 'absolute',
@@ -22,4 +22,10 @@ export const frameContent = style({
       pointerEvents: 'none',
     },
   },
+})
+
+export const navigation = style({})
+
+globalStyle(`body:has(${navigation}[data-is-dragged="true"])`, {
+  userSelect: 'none',
 })

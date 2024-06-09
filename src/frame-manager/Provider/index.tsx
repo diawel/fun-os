@@ -181,6 +181,11 @@ const Provider = ({ children, frames }: ProviderProps) => {
             state={isActive ? 'active' : 'inactive'}
             onFocus={() => (isActive ? {} : focus(index))}
             onClose={() => close(index)}
+            onMove={(position) => {
+              const frameNode = frameStack[index]
+              frameNode.position = position
+              setFrameStack([...frameStack])
+            }}
             {...{ position }}
           >
             <Component key={key} {...{ params }} />

@@ -1,3 +1,4 @@
+import { useEffect, useState } from 'react'
 import * as styles from './index.css'
 
 type FrameProps = {
@@ -6,9 +7,65 @@ type FrameProps = {
   position: { x: number; y: number }
   onFocus: () => void
   onClose: () => void
+  onMove: (position: { x: number; y: number }) => void
 }
 
-const Frame = ({ children, state, position, onFocus, onClose }: FrameProps) => {
+const Frame = ({
+  children,
+  state,
+  position,
+  onFocus,
+  onClose,
+  onMove,
+}: FrameProps) => {
+  const [dragState, setDragState] = useState<
+    | {
+        startPosition: {
+          x: number
+          y: number
+        }
+        initialPosition: {
+          x: number
+          y: number
+        }
+      }
+    | false
+  >(false)
+
+  useEffect(() => {
+    if (!dragState) return
+    const hundleMouseMove = (event: MouseEvent) => {
+      const { startPosition, initialPosition } = dragState
+      onMove({
+        x:
+          initialPosition.x +
+          (Math.max(Math.min(event.clientX, window.innerWidth), 0) -
+            startPosition.x) /
+            window.innerWidth,
+        y:
+          initialPosition.y +
+          (Math.max(Math.min(event.clientY, window.innerHeight), 0) -
+            startPosition.y) /
+            window.innerHeight,
+      })
+      onFocus()
+    }
+
+    const handleMouseLeave = () => {
+      setDragState(false)
+    }
+
+    window.addEventListener('mousemove', hundleMouseMove)
+    window.addEventListener('mouseleave', handleMouseLeave)
+    window.addEventListener('mouseup', handleMouseLeave)
+
+    return () => {
+      window.removeEventListener('mousemove', hundleMouseMove)
+      window.removeEventListener('mouseleave', handleMouseLeave)
+      window.removeEventListener('mouseup', handleMouseLeave)
+    }
+  }, [dragState, onFocus, onMove])
+
   return (
     <div
       style={{
@@ -18,12 +75,23 @@ const Frame = ({ children, state, position, onFocus, onClose }: FrameProps) => {
       className={styles.frame[state]}
       onClick={onFocus}
     >
-      <div>
+      <div
+        className={styles.navigation}
+        onMouseDown={(event) => {
+          event.stopPropagation()
+          setDragState({
+            startPosition: { x: event.clientX, y: event.clientY },
+            initialPosition: position,
+          })
+        }}
+        data-is-dragged={Boolean(dragState)}
+      >
         <button
           onClick={(event) => {
             event.stopPropagation()
             onClose()
           }}
+          onMouseDown={(event) => event.stopPropagation()}
         >
           close
         </button>
