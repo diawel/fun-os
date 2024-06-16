@@ -5,4 +5,7 @@ export const frame = style({
   height: 400,
   justifyContent: 'center',
   gap: 10,
+  overflow: 'auto',
+  maxHeight: '100vh',
+  backgroundColor: '#FFEDDC',
 })
