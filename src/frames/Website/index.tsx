@@ -1,13 +1,15 @@
 import { FrameContent } from '@/frame-manager/Provider'
-import { useFrame } from '@/frame-manager/Provider/frame-context'
 import * as styles from './index.css'
 
-const Website: FrameContent = ({ params }) => {
-  const { transition } = useFrame()
+import Header from './components/Header'
+import Footer from './components/Footer'
+
+const Website: FrameContent = () => {
 
   return (
     <div className={styles.frame}>
-      なんかのwebiste
+      <Header />
+      <Footer />
     </div>
   )
 }
