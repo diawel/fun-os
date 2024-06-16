@@ -182,9 +182,9 @@ const Provider = ({ children, frames }: ProviderProps) => {
             onFocus={() => (isActive ? {} : focus(index))}
             onClose={() => close(index)}
             onMove={(position) => {
-              const frameNode = frameStack[index]
-              frameNode.position = position
-              setFrameStack([...frameStack])
+              const modifiedFrameStack = [...frameStack]
+              modifiedFrameStack[index].position = position
+              navigate(modifiedFrameStack, { replace: true })
             }}
             {...{ position }}
           >
