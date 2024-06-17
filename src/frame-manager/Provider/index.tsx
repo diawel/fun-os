@@ -25,7 +25,7 @@ export type NavigateOptions = {
   replace?: boolean
 }
 
-let keySeed = 0
+let keySeed = Date.now()
 
 const isParamsEqual = (a: string[], b: string[]) =>
   a.length === b.length && a.every((param, index) => param === b[index])
