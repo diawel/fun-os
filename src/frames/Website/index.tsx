@@ -4,6 +4,7 @@ import * as styles from './index.css'
 import Header from './components/Header'
 import Footer from './components/Footer'
 import ContentCard from './components/ContentCard'
+import Tag from './components/Tag'
 import { contentCardData } from './util'
 
 const Website: FrameContent = () => {
@@ -11,6 +12,9 @@ const Website: FrameContent = () => {
     <div className={styles.frame}>
       <Header />
       <div>
+        <div>
+          <Tag>2年前期</Tag>
+        </div>
         {contentCardData.map((data, index) => (
           <ContentCard key={index} data={data} />
         ))}
