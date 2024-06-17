@@ -12,7 +12,14 @@ const Files: FrameContent = ({ params }) => {
       <div></div>
       <div>
         <div>
-          <h2>{currentDirectory?.name}</h2>
+          <h2>
+            {params.length > 0 && (
+              <button onClick={() => transition(params.slice(0, -1))}>
+                {'＜'}
+              </button>
+            )}
+            {currentDirectory?.name}
+          </h2>
         </div>
         <div>
           {currentDirectory?.children.map((child) => (
