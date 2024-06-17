@@ -7,7 +7,7 @@ export const contentCard = style({
   borderRadius: '25px',
   background: '#EFEFEF',
   boxShadow:
-    '15px 7px 26.7px 0px rgba(255, 255, 255, 0.54) inset, 0px 7px 53.8px 0px rgba(0, 0, 0, 0.12)',
+    '15px 7px 26.7px 0px rgba(255, 255, 255, 0.54)  inset, 0px 7px 53.8px 0px rgba(0, 0, 0, 0.12)',
 })
 
 export const content = style({
@@ -24,7 +24,6 @@ export const subjectName = style({
   fontWeight: 800,
   lineHeight: 'normal',
 })
-
 
 export const subjectTheme = style({
   color: '#E46BA5',
