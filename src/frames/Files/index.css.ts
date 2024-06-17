@@ -14,6 +14,19 @@ export const sidebar = style({
   backgroundColor: '#fff',
 })
 
+export const sidebarButton = style({
+  display: 'flex',
+  alignItems: 'center',
+  gap: 8,
+  border: 'none',
+  background: 'none',
+  fontSize: 14,
+  padding: '4px 8px',
+  cursor: 'pointer',
+  borderRadius: 4,
+  fontWeight: 'bold',
+})
+
 export const main = style({
   overflowY: 'auto',
 })
@@ -31,6 +44,7 @@ export const currentDirectory = style({
   display: 'flex',
   alignItems: 'center',
   fontSize: 16,
+  gap: 4,
 })
 
 export const returnButton = style({
@@ -38,9 +52,11 @@ export const returnButton = style({
   height: '100%',
   padding: '0 8px',
   border: 'none',
+  cursor: 'pointer',
   selectors: {
     '&[disabled]': {
       opacity: 0.3,
+      cursor: 'default',
     },
   },
 })
@@ -52,4 +68,6 @@ export const entityList = style({
   padding: 16,
   overflowY: 'auto',
   justifyItems: 'center',
+  fontWeight: 'bold',
+  fontSize: 14,
 })

@@ -9,5 +9,8 @@ export const button = style({
   justifyContent: 'center',
   cursor: 'pointer',
   flexDirection: 'column',
-  gap: 4,
+  gap: 8,
+  fontWeight: 'inherit',
+  color: 'inherit',
+  fontSize: 'inherit',
 })

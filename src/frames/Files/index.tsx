@@ -16,11 +16,27 @@ const Files: FrameContent = ({ params }) => {
         {directoryTree.children
           .filter((child) => 'children' in child)
           .map((child) => (
-            <div key={child.name}>
-              <button onClick={() => transition([child.name])}>
-                {child.name}
-              </button>
-            </div>
+            <button
+              key={child.name}
+              className={styles.sidebarButton}
+              onClick={
+                child.name !== params[0]
+                  ? () => transition([child.name])
+                  : undefined
+              }
+              style={{
+                backgroundColor:
+                  child.name === params[0] ? 'rgb(0 0 0 / 10%)' : 'transparent',
+              }}
+            >
+              <Icon
+                {...(child.icon ?? {
+                  icon: 'folder',
+                })}
+                size={18}
+              />
+              {child.name}
+            </button>
           ))}
       </div>
       <div className={styles.main}>
