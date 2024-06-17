@@ -1,4 +1,5 @@
 import * as styles from './index.css'
+import Button from '../Button'
 
 const ContentCard = () => {
   return (
@@ -11,7 +12,9 @@ const ContentCard = () => {
           <br />
           レーザーカッターや3Dプリンターが気軽に使えるのも、未来大の魅力です。
         </p>
-        <div>{/* ボタンコンポーネントが入る */}</div>
+        <div className={styles.buttonContainer}>
+          <Button>成果物を見る</Button>
+        </div>
       </div>
       <img className={styles.image} src="/src/assets/image.png" alt="" />
     </div>

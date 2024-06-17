@@ -53,3 +53,8 @@ export const image = style({
   flexShrink: 0,
   borderRadius: '0 25px 25px 0',
 })
+
+// ボタンの配置に対してのスタイル
+export const buttonContainer = style({
+  paddingTop: '17px',
+})
