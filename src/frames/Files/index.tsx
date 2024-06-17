@@ -4,7 +4,7 @@ import * as styles from './index.css'
 import { directoryTree, findDirectory } from './directory'
 
 const Files: FrameContent = ({ params }) => {
-  const { transition } = useFrame()
+  const { transition, open } = useFrame()
 
   const currentDirectory = findDirectory(directoryTree, params)
   return (
@@ -27,7 +27,7 @@ const Files: FrameContent = ({ params }) => {
               {'action' in child ? (
                 <button
                   onClick={() => {
-                    console.log(child.action.open.frame)
+                    open(child.action.open.frame, child.action.open.params)
                   }}
                 >
                   {child.name}
