@@ -2,6 +2,9 @@ import { FrameContent } from '@/frame-manager/Provider'
 import { useFrame } from '@/frame-manager/Provider/frame-context'
 import * as styles from './index.css'
 import { directoryTree, findDirectory } from './directory'
+import returnButton from './returnButton.svg'
+import Icon from '@/components/Icon'
+import EntityButton from '@/components/EntityButton'
 
 const Files: FrameContent = ({ params }) => {
   const { transition, open } = useFrame()
@@ -10,40 +13,72 @@ const Files: FrameContent = ({ params }) => {
   return (
     <div className={styles.frame}>
       <div className={styles.sidebar}>
-        {directoryTree.children.map((child) => (
-          <div key={child.name}>
-            <button onClick={() => transition([child.name])}>
+        {directoryTree.children
+          .filter((child) => 'children' in child)
+          .map((child) => (
+            <button
+              key={child.name}
+              className={styles.sidebarButton}
+              onClick={
+                child.name !== params[0]
+                  ? () => transition([child.name])
+                  : undefined
+              }
+              style={{
+                backgroundColor:
+                  child.name === params[0] ? 'rgb(0 0 0 / 10%)' : 'transparent',
+              }}
+            >
+              <Icon
+                {...(child.icon ?? {
+                  icon: 'folder',
+                })}
+                size={18}
+              />
               {child.name}
             </button>
-          </div>
-        ))}
+          ))}
       </div>
-      <div>
-        <div>
-          <h2>
-            {params.length > 0 && (
-              <button onClick={() => transition(params.slice(0, -1))}>
-                {'＜'}
-              </button>
-            )}
+      <div className={styles.main}>
+        <div className={styles.navbar}>
+          <h2 className={styles.currentDirectory}>
+            <button
+              className={styles.returnButton}
+              onClick={() => transition(params.slice(0, -1))}
+              disabled={params.length === 0}
+            >
+              <img src={returnButton} alt="return" />
+            </button>
+
             {currentDirectory?.name}
           </h2>
         </div>
-        <div>
+        <div className={styles.entityList}>
           {currentDirectory?.children.map((child) => (
             <div key={child.name}>
               {'action' in child ? (
-                <button
-                  onClick={() => {
+                <EntityButton
+                  icon={
+                    <Icon
+                      {...(child.icon ?? {
+                        icon: 'ordinaryFile',
+                      })}
+                      size={72}
+                    />
+                  }
+                  label={child.name}
+                  onOpen={() => {
                     open(child.action.open.frame, child.action.open.params)
                   }}
-                >
-                  {child.name}
-                </button>
+                />
               ) : (
-                <button onClick={() => transition([...params, child.name])}>
-                  {child.name}
-                </button>
+                <EntityButton
+                  icon={<Icon icon="folder" size={72} />}
+                  label={child.name}
+                  onOpen={() => {
+                    transition([...params, child.name])
+                  }}
+                />
               )}
             </div>
           ))}
