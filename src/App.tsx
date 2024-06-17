@@ -16,9 +16,19 @@ const App = () => {
           frame: Counter,
           validator: counterValidator,
         },
+        files: {
+          frame: Files,
+          validator: filesValidator,
+        },
+        website: {
+          frame: Website,
+          validator: websiteValidator,
+        },
       }}
     >
       <Open frame="counter">Open Counter</Open>
+      <Open frame="files">Open Files</Open>
+      <Open frame="website">Open Website</Open>
     </Provider>
   )
 }
