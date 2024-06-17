@@ -25,6 +25,7 @@ export const sidebarButton = style({
   cursor: 'pointer',
   borderRadius: 4,
   fontWeight: 'bold',
+  color: 'inherit',
 })
 
 export const main = style({
