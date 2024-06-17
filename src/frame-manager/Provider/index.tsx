@@ -18,6 +18,7 @@ type Frames = {
   [key: string]: {
     frame: FrameContent
     validator?: ParamValidator
+    backgroundColor?: string
   }
 }
 

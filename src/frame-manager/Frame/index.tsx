@@ -8,6 +8,7 @@ type FrameProps = {
   onFocus: () => void
   onClose: () => void
   onMove: (position: { x: number; y: number }) => void
+  backgroundColor?: string
 }
 
 const Frame = ({
@@ -17,6 +18,7 @@ const Frame = ({
   onFocus,
   onClose,
   onMove,
+  backgroundColor = '#fff',
 }: FrameProps) => {
   const [dragState, setDragState] = useState<
     | {
@@ -71,6 +73,7 @@ const Frame = ({
       style={{
         left: `${position.x * 100}%`,
         top: `${position.y * 100}%`,
+        backgroundColor,
       }}
       className={styles.frame[state]}
       onClick={onFocus}
@@ -87,14 +90,13 @@ const Frame = ({
         data-is-dragged={Boolean(dragState)}
       >
         <button
+          className={styles.closeButton}
           onClick={(event) => {
             event.stopPropagation()
             onClose()
           }}
           onMouseDown={(event) => event.stopPropagation()}
-        >
-          close
-        </button>
+        ></button>
       </div>
       <div className={styles.frameContent}>{children}</div>
     </div>
