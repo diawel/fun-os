@@ -6,6 +6,8 @@ export const contentCard = style({
   width: '513px',
   borderRadius: '25px',
   background: '#EFEFEF',
+
+  position: 'relative',
   boxShadow:
     '15px 7px 26.7px 0px rgba(255, 255, 255, 0.54)  inset, 0px 7px 53.8px 0px rgba(0, 0, 0, 0.12)',
 })
@@ -18,7 +20,6 @@ export const content = style({
 
 export const subjectName = style({
   color: '#E46BA5',
-  // fontFamily: '"Heisei Maru Gothic Std"',
   fontSize: '14px',
   fontStyle: 'normal',
   fontWeight: 800,
@@ -27,7 +28,6 @@ export const subjectName = style({
 
 export const subjectTheme = style({
   color: '#E46BA5',
-  // fontFamily: '"Heisei Maru Gothic Std"',
   fontSize: '20px',
   fontStyle: 'normal',
   fontWeight: 800,
@@ -40,7 +40,6 @@ export const subjectTheme = style({
 export const subjectDescription = style({
   width: '336px',
   color: '#E46BA5',
-  // fontFamily: '"Heisei Maru Gothic Std"',
   fontSize: '12px',
   fontStyle: 'normal',
   fontWeight: 400,
@@ -48,12 +47,13 @@ export const subjectDescription = style({
 })
 
 export const image = style({
-  height: '233px',
+  width: '130px',
   flexShrink: 0,
   borderRadius: '0 25px 25px 0',
 })
 
-// ボタンの配置に対してのスタイル
 export const buttonContainer = style({
-  paddingTop: '17px',
+  position: 'absolute',
+  bottom: '20px',
+  width: '100%',
 })
