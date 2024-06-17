@@ -14,11 +14,17 @@ export const sidebar = style({
   backgroundColor: '#fff',
 })
 
+export const main = style({
+  overflowY: 'auto',
+})
+
 export const navbar = style({
   backgroundColor: '#fff',
   display: 'flex',
   alignItems: 'center',
   height: 40,
+  position: 'sticky',
+  top: 0,
 })
 
 export const currentDirectory = style({
@@ -37,4 +43,13 @@ export const returnButton = style({
       opacity: 0.3,
     },
   },
+})
+
+export const entityList = style({
+  display: 'grid',
+  gridTemplateColumns: 'repeat(auto-fill, 100px)',
+  gap: 16,
+  padding: 16,
+  overflowY: 'auto',
+  justifyItems: 'center',
 })

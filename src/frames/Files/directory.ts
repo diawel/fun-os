@@ -1,6 +1,8 @@
+import Icon from '@/components/Icon'
+
 type File = {
   name: string
-  icon?: React.ReactNode
+  icon?: Omit<React.ComponentProps<typeof Icon>, 'size'>
   action: {
     open: {
       frame: string
@@ -11,7 +13,7 @@ type File = {
 
 type Directory = {
   name: string
-  icon?: React.ReactNode
+  icon?: Omit<React.ComponentProps<typeof Icon>, 'size'>
   children: (File | Directory)[]
 }
 

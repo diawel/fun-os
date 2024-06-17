@@ -3,6 +3,8 @@ import { useFrame } from '@/frame-manager/Provider/frame-context'
 import * as styles from './index.css'
 import { directoryTree, findDirectory } from './directory'
 import returnButton from './returnButton.svg'
+import Icon from '@/components/Icon'
+import EntityButton from '@/components/EntityButton'
 
 const Files: FrameContent = ({ params }) => {
   const { transition, open } = useFrame()
@@ -21,7 +23,7 @@ const Files: FrameContent = ({ params }) => {
             </div>
           ))}
       </div>
-      <div>
+      <div className={styles.main}>
         <div className={styles.navbar}>
           <h2 className={styles.currentDirectory}>
             <button
@@ -35,21 +37,32 @@ const Files: FrameContent = ({ params }) => {
             {currentDirectory?.name}
           </h2>
         </div>
-        <div>
+        <div className={styles.entityList}>
           {currentDirectory?.children.map((child) => (
             <div key={child.name}>
               {'action' in child ? (
-                <button
-                  onClick={() => {
+                <EntityButton
+                  icon={
+                    <Icon
+                      {...(child.icon ?? {
+                        icon: 'ordinaryFile',
+                      })}
+                      size={72}
+                    />
+                  }
+                  label={child.name}
+                  onOpen={() => {
                     open(child.action.open.frame, child.action.open.params)
                   }}
-                >
-                  {child.name}
-                </button>
+                />
               ) : (
-                <button onClick={() => transition([...params, child.name])}>
-                  {child.name}
-                </button>
+                <EntityButton
+                  icon={<Icon icon="folder" size={72} />}
+                  label={child.name}
+                  onOpen={() => {
+                    transition([...params, child.name])
+                  }}
+                />
               )}
             </div>
           ))}
