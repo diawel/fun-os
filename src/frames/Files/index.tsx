@@ -9,7 +9,15 @@ const Files: FrameContent = ({ params }) => {
   const currentDirectory = findDirectory(directoryTree, params)
   return (
     <div className={styles.frame}>
-      <div></div>
+      <div className={styles.sidebar}>
+        {directoryTree.children.map((child) => (
+          <div key={child.name}>
+            <button onClick={() => transition([child.name])}>
+              {child.name}
+            </button>
+          </div>
+        ))}
+      </div>
       <div>
         <div>
           <h2>

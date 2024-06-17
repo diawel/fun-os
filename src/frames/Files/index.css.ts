@@ -6,3 +6,8 @@ export const frame = style({
   display: 'grid',
   gridTemplateColumns: '1fr 3fr',
 })
+
+export const sidebar = style({
+  padding: 16,
+  borderRight: '1px solid #ccc',
+})
