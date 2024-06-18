@@ -5,6 +5,9 @@ import { counterValidator } from './frames/Counter/validator'
 import Files from './frames/Files'
 import { filesValidator } from './frames/Files/validator'
 
+import Website from './frames/Website'
+import { websiteValidator } from './frames/Website/validator'
+
 const App = () => {
   return (
     <Provider
@@ -17,10 +20,15 @@ const App = () => {
           frame: Files,
           validator: filesValidator,
         },
+        website: {
+          frame: Website,
+          validator: websiteValidator,
+        },
       }}
     >
       <Open frame="counter">Open Counter</Open>
       <Open frame="files">Open Files</Open>
+      <Open frame="website">Open Website</Open>
     </Provider>
   )
 }
