@@ -25,3 +25,7 @@ export const courseName = style({
 export const universityAddress = style({
   fontSize: '13px',
 })
+
+export const link = style({
+  color: '#FFF',
+})
