@@ -1,14 +1,11 @@
 import * as styles from './index.css'
 import Tag from './../Tag'
+import timelineArrow from './timeline_arrow.png'
 
 const Timeline = () => {
   return (
     <div className={styles.timeline}>
-      <img
-        className={styles.timelineArrow}
-        src="/src/assets/timeline_arrow.png"
-        alt=""
-      />
+      <img className={styles.timelineArrow} src={timelineArrow} alt="" />
       <div className={styles.tagStart}>
         <Tag>2年前期</Tag>
       </div>
