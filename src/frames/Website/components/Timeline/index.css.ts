@@ -5,8 +5,9 @@ export const timeline = style({
 })
 
 export const timelineArrow = style({
-  width: '62px',
+  height: '1650px',
   display: 'block',
+  paddingLeft: '10px',
 })
 
 export const tagStart = style({
@@ -16,7 +17,7 @@ export const tagStart = style({
 
 export const tagMiddle = style({
   position: 'absolute',
-  top: '50%', //WIP
+  top: '34%',
 })
 
 export const tagEnd = style({

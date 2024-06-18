@@ -11,13 +11,17 @@ const Website: FrameContent = () => {
   return (
     <div className={styles.frame}>
       <Header />
-      <div>
-        <div>
+      <div className={styles.mainContainer}>
+        <div className={styles.timelineContainer}>
           <Timeline />
         </div>
-        {contentCardData.map((data, index) => (
-          <ContentCard key={index} data={data} />
-        ))}
+        <div className={styles.contentCardContainer}>
+          {contentCardData.map((data, index) => (
+            <div className={styles.contentCard}>
+              <ContentCard key={index} data={data} />
+            </div>
+          ))}
+        </div>
       </div>
       <Footer />
     </div>
