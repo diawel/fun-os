@@ -3,6 +3,13 @@ import { useFrame } from '@/frame-manager/Provider/frame-context'
 import * as styles from './index.css'
 import { directoryTree, findDirectory } from './directory'
 import returnButton from './returnButton.svg'
+
+import AllImages from './components/AllImages'
+import Album from './components/Album'
+import VirtualCreature from './components/VirtualCreature'
+import Nobi from './components/Nobi'
+import Funtasista from './components/Funtasista'
+
 import Icon from '@/components/Icon'
 import EntityButton from '@/components/EntityButton'
 
@@ -46,11 +53,11 @@ const Photos: FrameContent = ({ params }) => {
             {currentDirectory?.name}
           </h2>
         </div>
-        {currentDirectory?.name === '全ての写真' && <p>all images</p>}
-        {currentDirectory?.name === 'アルバム' && <p>album</p>}
-        {currentDirectory?.name === '仮想生物' && <p>virtual creature</p>}
-        {currentDirectory?.name === '「のび」' && <p>nobi</p>}
-        {currentDirectory?.name === 'FUN!tasista!' && <p>funtasista</p>}
+        {currentDirectory?.name === '全ての写真' && <AllImages />}
+        {currentDirectory?.name === 'アルバム' && <Album />}
+        {currentDirectory?.name === '仮想生物' && <VirtualCreature />}
+        {currentDirectory?.name === '「のび」' && <Nobi />}
+        {currentDirectory?.name === 'FUN!tasista!' && <Funtasista />}
       </div>
     </div>
   )

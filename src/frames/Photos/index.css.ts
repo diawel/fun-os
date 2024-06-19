@@ -1,17 +1,16 @@
 import { style } from '@vanilla-extract/css'
 
 export const frame = style({
-  width: 720,
-  height: 400,
+  width: 791,
+  height: 599,
   display: 'grid',
   gridTemplateColumns: '1fr 3fr',
-  backgroundColor: '#fff9e2',
   color: '#303540',
 })
 
 export const sidebar = style({
   padding: 16,
-  backgroundColor: '#fff',
+  backgroundColor: '#F5F3E4',
 })
 
 export const sidebarButton = style({

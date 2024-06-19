@@ -1,15 +1,13 @@
 import * as styles from './index.css'
 
-const ImageCell = () => {
+interface ImageCellProps {
+  src: string
+}
+
+const ImageCell = ({ src }: ImageCellProps) => {
   return (
-    <div className={styles.header}>
-      <div className={styles.headerContent}>
-        <p className={styles.universityName}>公立はこだて未来大学</p>
-        <p className={styles.courseName}>情報デザインコース</p>
-        <p className={styles.courseDescription}>
-          このウェブサイトでは、情報デザインコースでの学びについて紹介しています。
-        </p>
-      </div>
+    <div>
+      <img className={styles.cell} src={src} alt="" />
     </div>
   )
 }
