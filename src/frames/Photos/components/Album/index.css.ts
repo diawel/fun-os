@@ -1,6 +1,6 @@
 import { style } from '@vanilla-extract/css'
 
-export const albumContainer = style({
+export const virtualCreatureContainer = style({
   padding: '20px',
 })
 

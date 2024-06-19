@@ -29,7 +29,7 @@ const App = () => {
         photos: {
           frame: Photos,
           validator: photosValidator,
-        }
+        },
       }}
     >
       <Open frame="counter">Open Counter</Open>

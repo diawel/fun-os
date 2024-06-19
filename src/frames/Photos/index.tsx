@@ -2,16 +2,13 @@ import { FrameContent } from '@/frame-manager/Provider'
 import { useFrame } from '@/frame-manager/Provider/frame-context'
 import * as styles from './index.css'
 import { directoryTree, findDirectory } from './directory'
-import returnButton from './returnButton.svg'
-
-import AllImages from './components/AllImages'
 import Album from './components/Album'
-import VirtualCreature from './components/VirtualCreature'
-import Nobi from './components/Nobi'
-import Funtasista from './components/Funtasista'
-
-import Icon from '@/components/Icon'
-import EntityButton from '@/components/EntityButton'
+import PhotosView from './components/PhotosView'
+import {
+  virtalCreatureList,
+  nobiList,
+  funtasistaList,
+} from './components/Album/utils'
 
 const Photos: FrameContent = ({ params }) => {
   const { transition } = useFrame()
@@ -42,22 +39,26 @@ const Photos: FrameContent = ({ params }) => {
       </div>
       <div className={styles.main}>
         <div className={styles.navbar}>
-          <h2 className={styles.currentDirectory}>
-            <button
-              className={styles.returnButton}
-              onClick={() => transition(params.slice(0, -1))}
-              disabled={params.length === 0}
-            >
-              <img src={returnButton} alt="return" />
-            </button>
-            {currentDirectory?.name}
-          </h2>
+          <h2 className={styles.currentDirectory}>{currentDirectory?.name}</h2>
         </div>
-        {currentDirectory?.name === '全ての写真' && <AllImages />}
+        {currentDirectory?.name === '全ての写真' && (
+          <PhotosView
+            imagePathList={virtalCreatureList.imagePathList.concat(
+              nobiList.imagePathList,
+              funtasistaList.imagePathList
+            )}
+          />
+        )}
         {currentDirectory?.name === 'アルバム' && <Album />}
-        {currentDirectory?.name === '仮想生物' && <VirtualCreature />}
-        {currentDirectory?.name === '「のび」' && <Nobi />}
-        {currentDirectory?.name === 'FUN!tasista!' && <Funtasista />}
+        {currentDirectory?.name === '仮想生物' && (
+          <PhotosView imagePathList={virtalCreatureList.imagePathList} />
+        )}
+        {currentDirectory?.name === '「のび」' && (
+          <PhotosView imagePathList={nobiList.imagePathList} />
+        )}
+        {currentDirectory?.name === 'FUN!tasista!' && (
+          <PhotosView imagePathList={funtasistaList.imagePathList} />
+        )}
       </div>
     </div>
   )
