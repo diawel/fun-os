@@ -7,6 +7,8 @@ import { filesValidator } from './frames/Files/validator'
 
 import Website from './frames/Website'
 import { websiteValidator } from './frames/Website/validator'
+import Photos from './frames/Photos'
+import { photosValidator } from './frames/Photos/validator'
 
 const App = () => {
   return (
@@ -24,11 +26,16 @@ const App = () => {
           frame: Website,
           validator: websiteValidator,
         },
+        photos: {
+          frame: Photos,
+          validator: photosValidator,
+        }
       }}
     >
       <Open frame="counter">Open Counter</Open>
       <Open frame="files">Open Files</Open>
       <Open frame="website">Open Website</Open>
+      <Open frame="photos">Open Photos</Open>
     </Provider>
   )
 }
