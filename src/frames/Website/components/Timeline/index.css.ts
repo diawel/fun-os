@@ -17,7 +17,7 @@ export const tagStart = style({
 
 export const tagMiddle = style({
   position: 'absolute',
-  top: '34%',
+  top: '50%',
 })
 
 export const tagEnd = style({
