@@ -189,7 +189,10 @@ const Provider = ({ children, frames }: ProviderProps) => {
             }}
             {...{ position }}
           >
-            <Component key={key} {...{ params }} />
+            <Component
+              key={key}
+              params={params.map((param) => decodeURIComponent(param))}
+            />
           </Frame>
         )
       })}
