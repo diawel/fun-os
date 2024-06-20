@@ -4,7 +4,6 @@ import * as styles from './index.css'
 import { directoryTree, findDirectory } from './directory'
 import Album from './components/Album'
 import PhotosView from './components/PhotosView'
-import { virtalCreatureList, nobiList, funtasistaList } from './utils'
 
 // import { virtualCreaturePhotoList, NobiPhotoList } from './utils'
 import { virtualCreaturePhotoList, funtasistaPhotoList } from './utils'
@@ -44,10 +43,7 @@ const Photos: FrameContent = ({ params }) => {
         </div>
         {currentDirectory?.name === '全ての写真' && (
           <PhotosView
-            imagePathList={virtalCreatureList.imagePathList.concat(
-              nobiList.imagePathList,
-              funtasistaList.imagePathList
-            )}
+            imagePathList={virtualCreaturePhotoList.concat(funtasistaPhotoList)}
           />
         )}
         {currentDirectory?.name === 'アルバム' && <Album />}
