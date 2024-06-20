@@ -51,36 +51,65 @@ export const timelineInner = style({
   minWidth: '100%',
   height: '100%',
   display: 'flex',
-  alignItems: 'flex-end',
+  justifyContent: 'flex-end',
+  flexDirection: 'column',
+  position: 'relative',
 })
 
 export const timelineLine = style({
   width: '100%',
   display: 'flex',
   position: 'relative',
-  height: 16,
+  height: 24,
+})
+
+export const timelineChapterLine = style({
+  width: '100%',
+  display: 'flex',
+  position: 'relative',
+  height: 78,
+})
+
+export const chapterBox = style({
+  position: 'absolute',
+  height: '100%',
 })
 
 const timelineLabelBase = style({
-  position: 'absolute',
-  height: 16,
   borderRadius: 5,
   display: 'flex',
   alignItems: 'center',
-  paddingInline: 4,
-  fontSize: 8,
+  paddingInline: 8,
+  fontSize: 12,
   fontWeight: 'bold',
   color: '#fff',
 })
 
 export const timelineLabel = styleVariants({
-  chapter: [timelineLabelBase, { backgroundColor: '#E80E69' }],
-  se: [timelineLabelBase, { backgroundColor: '#08A258' }],
-  bgm: [timelineLabelBase, { backgroundColor: '#0858A2' }],
+  chapter: [
+    timelineLabelBase,
+    { backgroundColor: '#E80E69', width: 'fit-content', height: 24 },
+  ],
+  se: [
+    timelineLabelBase,
+    { backgroundColor: '#08A258', position: 'absolute', height: '100%' },
+  ],
+  bgm: [
+    timelineLabelBase,
+    { backgroundColor: '#0858A2', position: 'absolute', height: '100%' },
+  ],
 })
 
 export const timelineMedia = style({
   height: 54,
+  width: '100%',
   backgroundSize: 'auto 100%',
   borderRadius: 5,
+})
+
+export const timelineCursor = style({
+  position: 'absolute',
+  width: 2,
+  height: '100%',
+  backgroundColor: '#F3280C',
 })

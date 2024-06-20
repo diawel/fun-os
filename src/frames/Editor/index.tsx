@@ -3,11 +3,30 @@ import { FrameContent } from '@/frame-manager/Provider'
 import Video from '@/components/Video'
 import { fileList } from './file-list'
 import EntityButton from '@/components/EntityButton'
-import { useRef, useState } from 'react'
+import { useEffect, useRef, useState } from 'react'
 
 const Editor: FrameContent = ({ params }) => {
   const previewRef = useRef<HTMLVideoElement>(null)
+  const timelineCursorRef = useRef<HTMLDivElement>(null)
   const [duration, setDuration] = useState(0)
+  const animationFrameRef = useRef<number | null>(null)
+
+  useEffect(() => {
+    const preview = previewRef.current
+    if (!preview || !timelineCursorRef.current) return
+    const handleTimeUpdate = () => {
+      if (!preview || !timelineCursorRef.current) return
+      timelineCursorRef.current.style.left =
+        (preview.currentTime / duration) * 100 + '%'
+      animationFrameRef.current = window.requestAnimationFrame(handleTimeUpdate)
+    }
+    handleTimeUpdate()
+
+    return () => {
+      if (animationFrameRef.current)
+        window.cancelAnimationFrame(animationFrameRef.current)
+    }
+  }, [duration])
 
   if (!(params.join('/') in fileList))
     return (
@@ -19,7 +38,6 @@ const Editor: FrameContent = ({ params }) => {
     )
 
   const file = fileList[params.join('/') as keyof typeof fileList]
-  console.log(file)
   return (
     <div className={styles.frame}>
       <div className={styles.mediapool}>
@@ -53,6 +71,38 @@ const Editor: FrameContent = ({ params }) => {
             width: duration * 10 + 'px',
           }}
         >
+          <div className={styles.timelineChapterLine}>
+            {file.chapter.map((chapter, index) => (
+              <div
+                key={chapter.time}
+                className={styles.chapterBox}
+                style={{
+                  left: (chapter.time / duration) * 100 + '%',
+                  width:
+                    (((index < file.chapter.length - 1
+                      ? file.chapter[index + 1].time
+                      : duration) -
+                      chapter.time) /
+                      duration) *
+                      100 +
+                    '%',
+                }}
+                onClick={() => {
+                  if (!previewRef.current) return
+                  previewRef.current.currentTime = chapter.time
+                }}
+              >
+                <div className={styles.timelineLabel.chapter}>
+                  {chapter.label}
+                </div>
+                <div
+                  style={{ backgroundImage: `url(${file.thumbnails[index]}` }}
+                  className={styles.timelineMedia}
+                />
+              </div>
+            ))}
+          </div>
+          <div className={styles.timelineLine} />
           <div className={styles.timelineLine}>
             {file.se.map((se) => (
               <div
@@ -65,6 +115,19 @@ const Editor: FrameContent = ({ params }) => {
               />
             ))}
           </div>
+          <div className={styles.timelineLine}>
+            {file.bgm.map((bgm) => (
+              <div
+                key={bgm[0]}
+                className={styles.timelineLabel.bgm}
+                style={{
+                  left: (bgm[0] / duration) * 100 + '%',
+                  width: ((bgm[1] - bgm[0]) / duration) * 100 + '%',
+                }}
+              />
+            ))}
+          </div>
+          <div className={styles.timelineCursor} ref={timelineCursorRef} />
         </div>
       </div>
     </div>
