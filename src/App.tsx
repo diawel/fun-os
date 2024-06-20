@@ -12,6 +12,8 @@ import Website from './frames/Website'
 import { websiteValidator } from './frames/Website/validator'
 import Photos from './frames/Photos'
 import { photosValidator } from './frames/Photos/validator'
+import Editor from './frames/Editor'
+import { editorValidator } from './frames/Editor/validator'
 
 const App = () => {
   return (
@@ -40,6 +42,10 @@ const App = () => {
         drawer: {
           frame: Drawer,
           validator: drawerValidator,
+        },
+        editor: {
+          frame: Editor,
+          validator: editorValidator,
         },
       }}
     >

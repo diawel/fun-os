@@ -94,7 +94,7 @@ export const directoryTree: Directory = {
                   name: '紹介動画.mp4',
                   action: {
                     open: {
-                      frame: 'player',
+                      frame: 'editor',
                       params: 'path',
                     },
                   },
@@ -126,7 +126,7 @@ export const directoryTree: Directory = {
                   name: '紹介動画.mp4',
                   action: {
                     open: {
-                      frame: 'player',
+                      frame: 'editor',
                       params: 'path',
                     },
                   },
@@ -158,7 +158,7 @@ export const directoryTree: Directory = {
                   name: '紹介動画.mp4',
                   action: {
                     open: {
-                      frame: 'player',
+                      frame: 'editor',
                       params: 'path',
                     },
                   },
@@ -190,7 +190,7 @@ export const directoryTree: Directory = {
                   name: '紹介動画.mp4',
                   action: {
                     open: {
-                      frame: 'player',
+                      frame: 'editor',
                       params: 'path',
                     },
                   },
@@ -222,7 +222,7 @@ export const directoryTree: Directory = {
                   name: '紹介動画.mp4',
                   action: {
                     open: {
-                      frame: 'player',
+                      frame: 'editor',
                       params: 'path',
                     },
                   },
@@ -254,7 +254,7 @@ export const directoryTree: Directory = {
                   name: '紹介動画.mp4',
                   action: {
                     open: {
-                      frame: 'player',
+                      frame: 'editor',
                       params: 'path',
                     },
                   },
@@ -286,7 +286,7 @@ export const directoryTree: Directory = {
                   name: '紹介動画.mp4',
                   action: {
                     open: {
-                      frame: 'player',
+                      frame: 'editor',
                       params: 'path',
                     },
                   },
@@ -318,7 +318,7 @@ export const directoryTree: Directory = {
                   name: '紹介動画.mp4',
                   action: {
                     open: {
-                      frame: 'player',
+                      frame: 'editor',
                       params: 'path',
                     },
                   },
@@ -350,7 +350,7 @@ export const directoryTree: Directory = {
                   name: '紹介動画.mp4',
                   action: {
                     open: {
-                      frame: 'player',
+                      frame: 'editor',
                       params: 'path',
                     },
                   },
@@ -373,7 +373,7 @@ export const directoryTree: Directory = {
                   name: '紹介動画.mp4',
                   action: {
                     open: {
-                      frame: 'player',
+                      frame: 'editor',
                       params: 'path',
                     },
                   },
@@ -533,7 +533,7 @@ export const directoryTree: Directory = {
               name: '作品紹介動画.mp4',
               action: {
                 open: {
-                  frame: 'player',
+                  frame: 'editor',
                   params: 'path',
                 },
               },
