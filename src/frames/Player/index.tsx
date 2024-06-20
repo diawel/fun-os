@@ -7,15 +7,14 @@ const Player: FrameContent = ({ params }) => {
   if (!(params.join('/') in fileList))
     return <div className={styles.error}>再生中の動画なし</div>
 
-  if (params.join('/') in fileList)
-    return (
-      <Video
-        src={fileList[params.join('/') as keyof typeof fileList]}
-        controls
-        className={styles.video}
-        autoPlay
-      />
-    )
+  return (
+    <Video
+      src={fileList[params.join('/') as keyof typeof fileList]}
+      controls
+      className={styles.video}
+      autoPlay
+    />
+  )
 }
 
 export default Player
