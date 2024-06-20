@@ -1,19 +1,21 @@
 import * as styles from './index.css'
 import { FrameContent } from '@/frame-manager/Provider'
 import Video from '@/components/Video'
-import { playlist } from './list'
+import { fileList } from './file-list'
 
 const Player: FrameContent = ({ params }) => {
-  if (params.join('/') in playlist)
+  if (!(params.join('/') in fileList))
+    return <div className={styles.error}>再生中の動画なし</div>
+
+  if (params.join('/') in fileList)
     return (
       <Video
-        src={playlist[params.join('/') as keyof typeof playlist]}
+        src={fileList[params.join('/') as keyof typeof fileList]}
         controls
         className={styles.video}
         autoPlay
       />
     )
-  return <div className={styles.error}>再生中の動画なし</div>
 }
 
 export default Player

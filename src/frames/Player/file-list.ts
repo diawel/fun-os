@@ -1,4 +1,4 @@
-export const playlist = {
+export const fileList = {
   '展示会/FUN!tasista! 2024.2/作品紹介動画.mp4':
     'https://fundesign-os.g.kuroco-img.app/files/user/videos/funtasista/playlist.m3u8',
   '授業/情報表現基礎Ⅲ/5to1/紹介動画.mp4':

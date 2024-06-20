@@ -25,7 +25,64 @@ export const directoryTree: Directory = {
       children: [
         {
           name: '情報デザインⅠ',
-          children: [],
+          children: [
+            {
+              name: 'MIKKE MIHARA to MIRAI',
+              children: [
+                {
+                  name: '印刷用.ai',
+                  action: {
+                    open: {
+                      frame: 'drawer',
+                      params: 'path',
+                    },
+                  },
+                },
+              ],
+            },
+            {
+              name: 'SHIKIRI',
+              children: [
+                {
+                  name: '印刷用.ai',
+                  action: {
+                    open: {
+                      frame: 'drawer',
+                      params: 'path',
+                    },
+                  },
+                },
+              ],
+            },
+            {
+              name: 'ブロックいろいろ',
+              children: [
+                {
+                  name: '印刷用.ai',
+                  action: {
+                    open: {
+                      frame: 'drawer',
+                      params: 'path',
+                    },
+                  },
+                },
+              ],
+            },
+            {
+              name: 'ベンチ、なぜここに？',
+              children: [
+                {
+                  name: '印刷用.ai',
+                  action: {
+                    open: {
+                      frame: 'drawer',
+                      params: 'path',
+                    },
+                  },
+                },
+              ],
+            },
+          ],
         },
         {
           name: '情報表現基礎Ⅲ',
@@ -38,6 +95,24 @@ export const directoryTree: Directory = {
                   action: {
                     open: {
                       frame: 'player',
+                      params: 'path',
+                    },
+                  },
+                },
+                {
+                  name: '紹介ポスター.ai',
+                  action: {
+                    open: {
+                      frame: 'drawer',
+                      params: 'path',
+                    },
+                  },
+                },
+                {
+                  name: '架空大会ポスター.ai',
+                  action: {
+                    open: {
+                      frame: 'drawer',
                       params: 'path',
                     },
                   },
@@ -56,6 +131,24 @@ export const directoryTree: Directory = {
                     },
                   },
                 },
+                {
+                  name: '紹介ポスター.ai',
+                  action: {
+                    open: {
+                      frame: 'drawer',
+                      params: 'path',
+                    },
+                  },
+                },
+                {
+                  name: '架空大会ポスター.ai',
+                  action: {
+                    open: {
+                      frame: 'drawer',
+                      params: 'path',
+                    },
+                  },
+                },
               ],
             },
             {
@@ -66,6 +159,24 @@ export const directoryTree: Directory = {
                   action: {
                     open: {
                       frame: 'player',
+                      params: 'path',
+                    },
+                  },
+                },
+                {
+                  name: '紹介ポスター.ai',
+                  action: {
+                    open: {
+                      frame: 'drawer',
+                      params: 'path',
+                    },
+                  },
+                },
+                {
+                  name: '架空大会ポスター.ai',
+                  action: {
+                    open: {
+                      frame: 'drawer',
                       params: 'path',
                     },
                   },
@@ -84,6 +195,24 @@ export const directoryTree: Directory = {
                     },
                   },
                 },
+                {
+                  name: '紹介ポスター.ai',
+                  action: {
+                    open: {
+                      frame: 'drawer',
+                      params: 'path',
+                    },
+                  },
+                },
+                {
+                  name: '架空大会ポスター.ai',
+                  action: {
+                    open: {
+                      frame: 'drawer',
+                      params: 'path',
+                    },
+                  },
+                },
               ],
             },
             {
@@ -94,6 +223,24 @@ export const directoryTree: Directory = {
                   action: {
                     open: {
                       frame: 'player',
+                      params: 'path',
+                    },
+                  },
+                },
+                {
+                  name: '紹介ポスター.ai',
+                  action: {
+                    open: {
+                      frame: 'drawer',
+                      params: 'path',
+                    },
+                  },
+                },
+                {
+                  name: '架空大会ポスター.ai',
+                  action: {
+                    open: {
+                      frame: 'drawer',
                       params: 'path',
                     },
                   },
@@ -112,6 +259,24 @@ export const directoryTree: Directory = {
                     },
                   },
                 },
+                {
+                  name: '紹介ポスター.ai',
+                  action: {
+                    open: {
+                      frame: 'drawer',
+                      params: 'path',
+                    },
+                  },
+                },
+                {
+                  name: '架空大会ポスター.ai',
+                  action: {
+                    open: {
+                      frame: 'drawer',
+                      params: 'path',
+                    },
+                  },
+                },
               ],
             },
             {
@@ -122,6 +287,24 @@ export const directoryTree: Directory = {
                   action: {
                     open: {
                       frame: 'player',
+                      params: 'path',
+                    },
+                  },
+                },
+                {
+                  name: '紹介ポスター.ai',
+                  action: {
+                    open: {
+                      frame: 'drawer',
+                      params: 'path',
+                    },
+                  },
+                },
+                {
+                  name: '架空大会ポスター.ai',
+                  action: {
+                    open: {
+                      frame: 'drawer',
                       params: 'path',
                     },
                   },
@@ -140,6 +323,24 @@ export const directoryTree: Directory = {
                     },
                   },
                 },
+                {
+                  name: '紹介ポスター.ai',
+                  action: {
+                    open: {
+                      frame: 'drawer',
+                      params: 'path',
+                    },
+                  },
+                },
+                {
+                  name: '架空大会ポスター.ai',
+                  action: {
+                    open: {
+                      frame: 'drawer',
+                      params: 'path',
+                    },
+                  },
+                },
               ],
             },
             {
@@ -150,6 +351,15 @@ export const directoryTree: Directory = {
                   action: {
                     open: {
                       frame: 'player',
+                      params: 'path',
+                    },
+                  },
+                },
+                {
+                  name: '架空大会ポスター.ai',
+                  action: {
+                    open: {
+                      frame: 'drawer',
                       params: 'path',
                     },
                   },
@@ -168,13 +378,144 @@ export const directoryTree: Directory = {
                     },
                   },
                 },
+                {
+                  name: '紹介ポスター.ai',
+                  action: {
+                    open: {
+                      frame: 'drawer',
+                      params: 'path',
+                    },
+                  },
+                },
+                {
+                  name: '架空大会ポスター.ai',
+                  action: {
+                    open: {
+                      frame: 'drawer',
+                      params: 'path',
+                    },
+                  },
+                },
               ],
             },
           ],
         },
         {
           name: '情報デザインⅡ',
-          children: [],
+          children: [
+            {
+              name: 'DELI REPI',
+              children: [
+                {
+                  name: '紹介ポスター.ai',
+                  action: {
+                    open: {
+                      frame: 'drawer',
+                      params: 'path',
+                    },
+                  },
+                },
+              ],
+            },
+            {
+              name: 'LatteLink',
+              children: [
+                {
+                  name: '紹介ポスター.ai',
+                  action: {
+                    open: {
+                      frame: 'drawer',
+                      params: 'path',
+                    },
+                  },
+                },
+              ],
+            },
+            {
+              name: 'Motion Wiz',
+              children: [
+                {
+                  name: '紹介ポスター.ai',
+                  action: {
+                    open: {
+                      frame: 'drawer',
+                      params: 'path',
+                    },
+                  },
+                },
+              ],
+            },
+            {
+              name: 'Perfect Presentation',
+              children: [
+                {
+                  name: '紹介ポスター.ai',
+                  action: {
+                    open: {
+                      frame: 'drawer',
+                      params: 'path',
+                    },
+                  },
+                },
+              ],
+            },
+            {
+              name: 'Rapid Recorder',
+              children: [
+                {
+                  name: '紹介ポスター.ai',
+                  action: {
+                    open: {
+                      frame: 'drawer',
+                      params: 'path',
+                    },
+                  },
+                },
+              ],
+            },
+            {
+              name: 'Visifolio',
+              children: [
+                {
+                  name: '紹介ポスター.ai',
+                  action: {
+                    open: {
+                      frame: 'drawer',
+                      params: 'path',
+                    },
+                  },
+                },
+              ],
+            },
+            {
+              name: 'どこかのチケット',
+              children: [
+                {
+                  name: '紹介ポスター.ai',
+                  action: {
+                    open: {
+                      frame: 'drawer',
+                      params: 'path',
+                    },
+                  },
+                },
+              ],
+            },
+            {
+              name: '風土FOOD',
+              children: [
+                {
+                  name: '紹介ポスター.ai',
+                  action: {
+                    open: {
+                      frame: 'drawer',
+                      params: 'path',
+                    },
+                  },
+                },
+              ],
+            },
+          ],
         },
       ],
     },
@@ -193,6 +534,15 @@ export const directoryTree: Directory = {
               action: {
                 open: {
                   frame: 'player',
+                  params: 'path',
+                },
+              },
+            },
+            {
+              name: 'ポスター.ai',
+              action: {
+                open: {
+                  frame: 'drawer',
                   params: 'path',
                 },
               },
