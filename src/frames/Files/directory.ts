@@ -6,7 +6,7 @@ type File = {
   action: {
     open: {
       frame: string
-      params: string[]
+      params: string[] | 'path'
     }
   }
 }
@@ -32,43 +32,143 @@ export const directoryTree: Directory = {
           children: [
             {
               name: 'ツミ！',
-              children: [],
+              children: [
+                {
+                  name: '紹介動画.mp4',
+                  action: {
+                    open: {
+                      frame: 'player',
+                      params: 'path',
+                    },
+                  },
+                },
+              ],
             },
             {
               name: 'WORD HUNTER',
-              children: [],
+              children: [
+                {
+                  name: '紹介動画.mp4',
+                  action: {
+                    open: {
+                      frame: 'player',
+                      params: 'path',
+                    },
+                  },
+                },
+              ],
             },
             {
               name: 'DATU',
-              children: [],
+              children: [
+                {
+                  name: '紹介動画.mp4',
+                  action: {
+                    open: {
+                      frame: 'player',
+                      params: 'path',
+                    },
+                  },
+                },
+              ],
             },
             {
               name: 'SAMURAI SHADOWS',
-              children: [],
+              children: [
+                {
+                  name: '紹介動画.mp4',
+                  action: {
+                    open: {
+                      frame: 'player',
+                      params: 'path',
+                    },
+                  },
+                },
+              ],
             },
             {
               name: 'INTERSTELLAR',
-              children: [],
+              children: [
+                {
+                  name: '紹介動画.mp4',
+                  action: {
+                    open: {
+                      frame: 'player',
+                      params: 'path',
+                    },
+                  },
+                },
+              ],
             },
             {
               name: 'ゴーストれ！',
-              children: [],
+              children: [
+                {
+                  name: '紹介動画.mp4',
+                  action: {
+                    open: {
+                      frame: 'player',
+                      params: 'path',
+                    },
+                  },
+                },
+              ],
             },
             {
               name: 'Byte',
-              children: [],
+              children: [
+                {
+                  name: '紹介動画.mp4',
+                  action: {
+                    open: {
+                      frame: 'player',
+                      params: 'path',
+                    },
+                  },
+                },
+              ],
             },
             {
               name: 'チエカバナナ',
-              children: [],
+              children: [
+                {
+                  name: '紹介動画.mp4',
+                  action: {
+                    open: {
+                      frame: 'player',
+                      params: 'path',
+                    },
+                  },
+                },
+              ],
             },
             {
               name: 'ぽりりずむ',
-              children: [],
+              children: [
+                {
+                  name: '紹介動画.mp4',
+                  action: {
+                    open: {
+                      frame: 'player',
+                      params: 'path',
+                    },
+                  },
+                },
+              ],
             },
             {
               name: '5to1',
-              children: [],
+              children: [
+                {
+                  name: '紹介動画.mp4',
+                  action: {
+                    open: {
+                      frame: 'player',
+                      params: 'path',
+                    },
+                  },
+                },
+              ],
             },
           ],
         },
@@ -87,7 +187,17 @@ export const directoryTree: Directory = {
         },
         {
           name: 'FUN!tasista! 2024.2',
-          children: [],
+          children: [
+            {
+              name: '作品紹介動画.mp4',
+              action: {
+                open: {
+                  frame: 'player',
+                  params: 'path',
+                },
+              },
+            },
+          ],
         },
       ],
     },
