@@ -14,6 +14,8 @@ import Photos from './frames/Photos'
 import { photosValidator } from './frames/Photos/validator'
 import Editor from './frames/Editor'
 import { editorValidator } from './frames/Editor/validator'
+import Preview from './frames/Preview'
+import { previewValidator } from './frames/Preview/validator'
 
 const App = () => {
   return (
@@ -46,6 +48,10 @@ const App = () => {
         editor: {
           frame: Editor,
           validator: editorValidator,
+        },
+        preview: {
+          frame: Preview,
+          validator: previewValidator,
         },
       }}
     >

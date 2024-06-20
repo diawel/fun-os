@@ -555,7 +555,7 @@ export const directoryTree: Directory = {
       name: 'バイト 作業用.ai',
       action: {
         open: {
-          frame: 'drawer',
+          frame: 'preview',
           params: 'path',
         },
       },
