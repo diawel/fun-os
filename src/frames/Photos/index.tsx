@@ -13,6 +13,7 @@ const Photos: FrameContent = ({ params }) => {
   return (
     <div className={styles.frame}>
       <div className={styles.sidebar}>
+        <p className={styles.title}>写真</p>
         {directoryTree.children
           .filter((child) => 'children' in child)
           .map((child) => (

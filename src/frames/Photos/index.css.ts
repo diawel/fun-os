@@ -9,8 +9,14 @@ export const frame = style({
 })
 
 export const sidebar = style({
-  padding: 16,
+  padding: 20,
   backgroundColor: '#F5F3E4',
+})
+
+export const title = style({
+  fontSize: '12px',
+  padding: '15px 0 40px 0',
+  fontWeight: 'bold',
 })
 
 export const sidebarButton = style({
@@ -19,7 +25,7 @@ export const sidebarButton = style({
   gap: 8,
   border: 'none',
   background: 'none',
-  fontSize: 14,
+  fontSize: 12,
   padding: '4px 8px',
   cursor: 'pointer',
   borderRadius: 4,
@@ -35,6 +41,7 @@ export const navbar = style({
   backgroundColor: '#fff',
   display: 'flex',
   alignItems: 'center',
+  padding: '18px 0 10px 0',
   height: 40,
   position: 'sticky',
   top: 0,
@@ -43,7 +50,8 @@ export const navbar = style({
 export const currentDirectory = style({
   display: 'flex',
   alignItems: 'center',
-  fontSize: 16,
+  fontSize: 20,
+  paddingLeft: 23,
   gap: 4,
 })
 
