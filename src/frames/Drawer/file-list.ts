@@ -62,4 +62,5 @@ export const fileList = {
     '/file-contents/ai/wordhunter-introduction.png',
   '授業/情報表現基礎Ⅲ/WORD HUNTER/架空大会ポスター.ai':
     '/file-contents/ai/wordhunter-poster.png',
+  'バイト 作業用.ai': '/file-contents/ai/hakodate.png',
 }
