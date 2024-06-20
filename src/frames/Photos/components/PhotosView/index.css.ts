@@ -31,8 +31,7 @@ export const modalContent = style({
 })
 
 export const modalImage = style({
-  maxWidth: '90%',
-  maxHeight: '90%',
+  width: '600px',
 })
 
 export const button = style({
