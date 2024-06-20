@@ -197,6 +197,15 @@ export const directoryTree: Directory = {
                 },
               },
             },
+            {
+              name: 'ポスター.ai',
+              action: {
+                open: {
+                  frame: 'drawer',
+                  params: 'path',
+                },
+              },
+            },
           ],
         },
       ],
