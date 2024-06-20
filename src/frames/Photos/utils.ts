@@ -103,6 +103,13 @@ import VirtualCreaturePhoto41 from './assets/PhotoImage/VirtualCreature/Image_41
 import VirtualCreaturePhoto42 from './assets/PhotoImage/VirtualCreature/Image_42.png'
 import VirtualCreaturePhoto43 from './assets/PhotoImage/VirtualCreature/Image_43.png'
 
+import FuntasistaPhoto1 from './assets/PhotoImage/Funtasista/image_1.png'
+import FuntasistaPhoto2 from './assets/PhotoImage/Funtasista/image_2.png'
+import FuntasistaPhoto3 from './assets/PhotoImage/Funtasista/image_3.png'
+import FuntasistaPhoto4 from './assets/PhotoImage/Funtasista/image_4.png'
+import FuntasistaPhoto5 from './assets/PhotoImage/Funtasista/image_5.png'
+import FuntasistaPhoto6 from './assets/PhotoImage/Funtasista/image_6.png'
+
 export interface ImageDataProps {
   title: string
   dateRange: string
@@ -230,4 +237,13 @@ export const NobiPhotoList: string[] = [
   NobiPhoto41,
   NobiPhoto42,
   NobiPhoto43,
+]
+
+export const funtasistaPhotoList: string[] = [
+  FuntasistaPhoto1,
+  FuntasistaPhoto2,
+  FuntasistaPhoto3,
+  FuntasistaPhoto4,
+  FuntasistaPhoto5,
+  FuntasistaPhoto6,
 ]

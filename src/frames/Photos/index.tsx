@@ -7,7 +7,7 @@ import PhotosView from './components/PhotosView'
 import { virtalCreatureList, nobiList, funtasistaList } from './utils'
 
 // import { virtualCreaturePhotoList, NobiPhotoList } from './utils'
-import { virtualCreaturePhotoList } from './utils'
+import { virtualCreaturePhotoList, funtasistaPhotoList } from './utils'
 
 const Photos: FrameContent = ({ params }) => {
   const { transition } = useFrame()
@@ -58,7 +58,7 @@ const Photos: FrameContent = ({ params }) => {
           <PhotosView imagePathList={NobiPhotoList} />
         )} */}
         {currentDirectory?.name === 'FUN!tasista!' && (
-          <PhotosView imagePathList={funtasistaList.imagePathList} />
+          <PhotosView imagePathList={funtasistaPhotoList} />
         )}
       </div>
     </div>
