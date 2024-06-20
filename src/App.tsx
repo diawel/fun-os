@@ -10,6 +10,8 @@ import Player from './frames/Player'
 import { playerValidator } from './frames/Player/validator'
 import Website from './frames/Website'
 import { websiteValidator } from './frames/Website/validator'
+import Photos from './frames/Photos'
+import { photosValidator } from './frames/Photos/validator'
 
 const App = () => {
   return (
@@ -27,6 +29,10 @@ const App = () => {
           frame: Website,
           validator: websiteValidator,
         },
+        photos: {
+          frame: Photos,
+          validator: photosValidator,
+        },
         player: {
           frame: Player,
           validator: playerValidator,
@@ -42,6 +48,7 @@ const App = () => {
       <Open frame="website">Open Website</Open>
       <Open frame="player">Open Player</Open>
       <Open frame="drawer">Open Drawer</Open>
+      <Open frame="photos">Open Photos</Open>
     </Provider>
   )
 }
