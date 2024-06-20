@@ -31,7 +31,8 @@ export const modalContent = style({
 })
 
 export const modalImage = style({
-  width: '600px',
+  maxHeight: '600px',
+  maxWidth: '600px',
 })
 
 export const button = style({
@@ -45,17 +46,17 @@ export const button = style({
 
 export const closeButton = style({
   top: '10px',
-  right: '20px',
+  right: '-50px',
 })
 
 export const prevButton = style({
-  left: '10px',
+  left: '-50px',
   top: '50%',
   transform: 'translateY(-50%)',
 })
 
 export const nextButton = style({
-  right: '10px',
+  right: '-50px',
   top: '50%',
   transform: 'translateY(-50%)',
 })
