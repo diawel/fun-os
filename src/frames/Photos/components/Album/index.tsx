@@ -1,5 +1,6 @@
 import * as styles from './index.css'
-import { virtalCreatureList, nobiList, funtasistaList } from '../../utils'
+// import { virtalCreatureList, nobiList, funtasistaList } from '../../utils'
+import { virtalCreatureList, funtasistaList } from '../../utils'
 import ImageCell from '../ImageCell'
 import { useFrame } from '@/frame-manager/Provider/frame-context'
 
@@ -37,7 +38,7 @@ const Album = () => {
         </div>
         <h4 className={styles.totalImages}>44</h4>
       </div>
-      <div
+      {/* <div
         className={styles.nobiContainer}
         onClick={() => transition(['「のび」'])}
       >
@@ -65,7 +66,7 @@ const Album = () => {
           })}
         </div>
         <h4 className={styles.totalImages}>42</h4>
-      </div>
+      </div> */}
       <div
         className={styles.funtasistaContainer}
         onClick={() => transition(['FUN!tasista!'])}
