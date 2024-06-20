@@ -4,13 +4,14 @@ export const frame = style({
   width: 791,
   height: 599,
   display: 'grid',
-  gridTemplateColumns: '1fr 3fr',
+  gridTemplateColumns: '1fr 4fr',
   color: '#303540',
 })
 
 export const sidebar = style({
   padding: 20,
   backgroundColor: '#F5F3E4',
+  width: 166,
 })
 
 export const title = style({

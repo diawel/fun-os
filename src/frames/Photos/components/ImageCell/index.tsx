@@ -8,7 +8,6 @@ interface ImageCellProps {
 
 const ImageCell = ({ src, isFirstIndex, isLastIndex }: ImageCellProps) => {
   return (
-    // firstIndexなら左端を丸める, lastIndexなら右端を丸める
     <img
       className={
         styles.cell +

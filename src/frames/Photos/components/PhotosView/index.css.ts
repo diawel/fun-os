@@ -3,12 +3,13 @@ import { style } from '@vanilla-extract/css'
 export const photos = style({
   display: 'flex',
   flexWrap: 'wrap',
+  padding: '25px 12px 0 12px',
 })
 
 export const image = style({
-  width: '150px',
-  height: '150px',
-  margin: '5px',
+  width: '100px',
+  height: '100px',
+  objectFit: 'cover',
   cursor: 'pointer',
 })
 
