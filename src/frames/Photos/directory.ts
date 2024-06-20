@@ -30,7 +30,20 @@ export const directoryTree: Directory = {
     },
     {
       name: '仮想生物',
-      children: [],
+      children: [
+        {
+          name: '1',
+          children: [],
+        },
+        {
+          name: '2',
+          children: [],
+        },
+        {
+          name: '3',
+          children: [],
+        },
+      ],
     },
     {
       name: '「のび」',

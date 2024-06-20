@@ -45,7 +45,6 @@ const PhotosView = ({ imagePathList }: PhotosViewProps) => {
           onClick={() => openModal(index)}
         />
       ))}
-
       {isModalOpen && (
         <div className={styles.modal} onClick={handleBackgroundClick}>
           <div className={styles.modalContent}>

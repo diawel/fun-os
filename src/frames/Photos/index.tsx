@@ -4,11 +4,7 @@ import * as styles from './index.css'
 import { directoryTree, findDirectory } from './directory'
 import Album from './components/Album'
 import PhotosView from './components/PhotosView'
-import {
-  virtalCreatureList,
-  nobiList,
-  funtasistaList,
-} from './components/Album/utils'
+import { virtalCreatureList, nobiList, funtasistaList } from './utils'
 
 const Photos: FrameContent = ({ params }) => {
   const { transition } = useFrame()

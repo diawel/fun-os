@@ -1,6 +1,6 @@
 import * as styles from './index.css'
 import React from 'react'
-import { virtalCreatureList, nobiList, funtasistaList } from './utils'
+import { virtalCreatureList, nobiList, funtasistaList } from '../../utils'
 import ImageCell from '../ImageCell'
 import { useFrame } from '@/frame-manager/Provider/frame-context'
 

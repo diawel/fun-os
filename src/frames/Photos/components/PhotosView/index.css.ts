@@ -1,16 +1,16 @@
-import { style } from '@vanilla-extract/css';
+import { style } from '@vanilla-extract/css'
 
 export const photos = style({
   display: 'flex',
   flexWrap: 'wrap',
-});
+})
 
 export const image = style({
   width: '150px',
   height: '150px',
   margin: '5px',
   cursor: 'pointer',
-});
+})
 
 export const modal = style({
   position: 'fixed',
@@ -22,16 +22,16 @@ export const modal = style({
   display: 'flex',
   justifyContent: 'center',
   alignItems: 'center',
-});
+})
 
 export const modalContent = style({
   position: 'relative',
-});
+})
 
 export const modalImage = style({
   maxWidth: '90%',
   maxHeight: '90%',
-});
+})
 
 export const button = style({
   position: 'absolute',
@@ -40,21 +40,21 @@ export const button = style({
   color: 'white',
   fontSize: '2em',
   cursor: 'pointer',
-});
+})
 
 export const closeButton = style({
   top: '10px',
   right: '20px',
-});
+})
 
 export const prevButton = style({
   left: '10px',
   top: '50%',
   transform: 'translateY(-50%)',
-});
+})
 
 export const nextButton = style({
   right: '10px',
   top: '50%',
   transform: 'translateY(-50%)',
-});
+})
