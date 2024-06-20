@@ -1,4 +1,4 @@
-import { style } from '@vanilla-extract/css'
+import { style, styleVariants } from '@vanilla-extract/css'
 
 export const frame = style({
   width: 1000,
@@ -30,6 +30,14 @@ export const mediapool = style({
   padding: 16,
   borderRadius: 15,
   backgroundColor: '#303540',
+  display: 'flex',
+  flexWrap: 'wrap',
+})
+
+export const mediapoolItem = style({
+  width: 100,
+  aspectRatio: '16 / 9',
+  objectFit: 'cover',
 })
 
 export const timeline = style({
@@ -47,11 +55,32 @@ export const timelineInner = style({
 })
 
 export const timelineLine = style({
-  height: 16,
   width: '100%',
+  display: 'flex',
+  position: 'relative',
+  height: 16,
 })
 
-export const timelineMediaLine = style({
+const timelineLabelBase = style({
+  position: 'absolute',
+  height: 16,
+  borderRadius: 5,
+  display: 'flex',
+  alignItems: 'center',
+  paddingInline: 4,
+  fontSize: 8,
+  fontWeight: 'bold',
+  color: '#fff',
+})
+
+export const timelineLabel = styleVariants({
+  chapter: [timelineLabelBase, { backgroundColor: '#E80E69' }],
+  se: [timelineLabelBase, { backgroundColor: '#08A258' }],
+  bgm: [timelineLabelBase, { backgroundColor: '#0858A2' }],
+})
+
+export const timelineMedia = style({
   height: 54,
-  width: '100%',
+  backgroundSize: 'auto 100%',
+  borderRadius: 5,
 })
