@@ -6,7 +6,7 @@ type File = {
   action: {
     open: {
       frame: string
-      params: string[]
+      params: string[] | 'path'
     }
   }
 }
@@ -25,56 +25,497 @@ export const directoryTree: Directory = {
       children: [
         {
           name: '情報デザインⅠ',
-          children: [],
+          children: [
+            {
+              name: 'MIKKE MIHARA to MIRAI',
+              children: [
+                {
+                  name: '印刷用.ai',
+                  action: {
+                    open: {
+                      frame: 'drawer',
+                      params: 'path',
+                    },
+                  },
+                },
+              ],
+            },
+            {
+              name: 'SHIKIRI',
+              children: [
+                {
+                  name: '印刷用.ai',
+                  action: {
+                    open: {
+                      frame: 'drawer',
+                      params: 'path',
+                    },
+                  },
+                },
+              ],
+            },
+            {
+              name: 'ブロックいろいろ',
+              children: [
+                {
+                  name: '印刷用.ai',
+                  action: {
+                    open: {
+                      frame: 'drawer',
+                      params: 'path',
+                    },
+                  },
+                },
+              ],
+            },
+            {
+              name: 'ベンチ、なぜここに？',
+              children: [
+                {
+                  name: '印刷用.ai',
+                  action: {
+                    open: {
+                      frame: 'drawer',
+                      params: 'path',
+                    },
+                  },
+                },
+              ],
+            },
+          ],
         },
         {
           name: '情報表現基礎Ⅲ',
           children: [
             {
               name: 'ツミ！',
-              children: [],
+              children: [
+                {
+                  name: '紹介動画.mp4',
+                  action: {
+                    open: {
+                      frame: 'player',
+                      params: 'path',
+                    },
+                  },
+                },
+                {
+                  name: '紹介ポスター.ai',
+                  action: {
+                    open: {
+                      frame: 'drawer',
+                      params: 'path',
+                    },
+                  },
+                },
+                {
+                  name: '架空大会ポスター.ai',
+                  action: {
+                    open: {
+                      frame: 'drawer',
+                      params: 'path',
+                    },
+                  },
+                },
+              ],
             },
             {
               name: 'WORD HUNTER',
-              children: [],
+              children: [
+                {
+                  name: '紹介動画.mp4',
+                  action: {
+                    open: {
+                      frame: 'player',
+                      params: 'path',
+                    },
+                  },
+                },
+                {
+                  name: '紹介ポスター.ai',
+                  action: {
+                    open: {
+                      frame: 'drawer',
+                      params: 'path',
+                    },
+                  },
+                },
+                {
+                  name: '架空大会ポスター.ai',
+                  action: {
+                    open: {
+                      frame: 'drawer',
+                      params: 'path',
+                    },
+                  },
+                },
+              ],
             },
             {
               name: 'DATU',
-              children: [],
+              children: [
+                {
+                  name: '紹介動画.mp4',
+                  action: {
+                    open: {
+                      frame: 'player',
+                      params: 'path',
+                    },
+                  },
+                },
+                {
+                  name: '紹介ポスター.ai',
+                  action: {
+                    open: {
+                      frame: 'drawer',
+                      params: 'path',
+                    },
+                  },
+                },
+                {
+                  name: '架空大会ポスター.ai',
+                  action: {
+                    open: {
+                      frame: 'drawer',
+                      params: 'path',
+                    },
+                  },
+                },
+              ],
             },
             {
               name: 'SAMURAI SHADOWS',
-              children: [],
+              children: [
+                {
+                  name: '紹介動画.mp4',
+                  action: {
+                    open: {
+                      frame: 'player',
+                      params: 'path',
+                    },
+                  },
+                },
+                {
+                  name: '紹介ポスター.ai',
+                  action: {
+                    open: {
+                      frame: 'drawer',
+                      params: 'path',
+                    },
+                  },
+                },
+                {
+                  name: '架空大会ポスター.ai',
+                  action: {
+                    open: {
+                      frame: 'drawer',
+                      params: 'path',
+                    },
+                  },
+                },
+              ],
             },
             {
               name: 'INTERSTELLAR',
-              children: [],
+              children: [
+                {
+                  name: '紹介動画.mp4',
+                  action: {
+                    open: {
+                      frame: 'player',
+                      params: 'path',
+                    },
+                  },
+                },
+                {
+                  name: '紹介ポスター.ai',
+                  action: {
+                    open: {
+                      frame: 'drawer',
+                      params: 'path',
+                    },
+                  },
+                },
+                {
+                  name: '架空大会ポスター.ai',
+                  action: {
+                    open: {
+                      frame: 'drawer',
+                      params: 'path',
+                    },
+                  },
+                },
+              ],
             },
             {
               name: 'ゴーストれ！',
-              children: [],
+              children: [
+                {
+                  name: '紹介動画.mp4',
+                  action: {
+                    open: {
+                      frame: 'player',
+                      params: 'path',
+                    },
+                  },
+                },
+                {
+                  name: '紹介ポスター.ai',
+                  action: {
+                    open: {
+                      frame: 'drawer',
+                      params: 'path',
+                    },
+                  },
+                },
+                {
+                  name: '架空大会ポスター.ai',
+                  action: {
+                    open: {
+                      frame: 'drawer',
+                      params: 'path',
+                    },
+                  },
+                },
+              ],
             },
             {
               name: 'Byte',
-              children: [],
+              children: [
+                {
+                  name: '紹介動画.mp4',
+                  action: {
+                    open: {
+                      frame: 'player',
+                      params: 'path',
+                    },
+                  },
+                },
+                {
+                  name: '紹介ポスター.ai',
+                  action: {
+                    open: {
+                      frame: 'drawer',
+                      params: 'path',
+                    },
+                  },
+                },
+                {
+                  name: '架空大会ポスター.ai',
+                  action: {
+                    open: {
+                      frame: 'drawer',
+                      params: 'path',
+                    },
+                  },
+                },
+              ],
             },
             {
               name: 'チエカバナナ',
-              children: [],
+              children: [
+                {
+                  name: '紹介動画.mp4',
+                  action: {
+                    open: {
+                      frame: 'player',
+                      params: 'path',
+                    },
+                  },
+                },
+                {
+                  name: '紹介ポスター.ai',
+                  action: {
+                    open: {
+                      frame: 'drawer',
+                      params: 'path',
+                    },
+                  },
+                },
+                {
+                  name: '架空大会ポスター.ai',
+                  action: {
+                    open: {
+                      frame: 'drawer',
+                      params: 'path',
+                    },
+                  },
+                },
+              ],
             },
             {
               name: 'ぽりりずむ',
-              children: [],
+              children: [
+                {
+                  name: '紹介動画.mp4',
+                  action: {
+                    open: {
+                      frame: 'player',
+                      params: 'path',
+                    },
+                  },
+                },
+                {
+                  name: '架空大会ポスター.ai',
+                  action: {
+                    open: {
+                      frame: 'drawer',
+                      params: 'path',
+                    },
+                  },
+                },
+              ],
             },
             {
               name: '5to1',
-              children: [],
+              children: [
+                {
+                  name: '紹介動画.mp4',
+                  action: {
+                    open: {
+                      frame: 'player',
+                      params: 'path',
+                    },
+                  },
+                },
+                {
+                  name: '紹介ポスター.ai',
+                  action: {
+                    open: {
+                      frame: 'drawer',
+                      params: 'path',
+                    },
+                  },
+                },
+                {
+                  name: '架空大会ポスター.ai',
+                  action: {
+                    open: {
+                      frame: 'drawer',
+                      params: 'path',
+                    },
+                  },
+                },
+              ],
             },
           ],
         },
         {
           name: '情報デザインⅡ',
-          children: [],
+          children: [
+            {
+              name: 'DELI REPI',
+              children: [
+                {
+                  name: '紹介ポスター.ai',
+                  action: {
+                    open: {
+                      frame: 'drawer',
+                      params: 'path',
+                    },
+                  },
+                },
+              ],
+            },
+            {
+              name: 'LatteLink',
+              children: [
+                {
+                  name: '紹介ポスター.ai',
+                  action: {
+                    open: {
+                      frame: 'drawer',
+                      params: 'path',
+                    },
+                  },
+                },
+              ],
+            },
+            {
+              name: 'Motion Wiz',
+              children: [
+                {
+                  name: '紹介ポスター.ai',
+                  action: {
+                    open: {
+                      frame: 'drawer',
+                      params: 'path',
+                    },
+                  },
+                },
+              ],
+            },
+            {
+              name: 'Perfect Presentation',
+              children: [
+                {
+                  name: '紹介ポスター.ai',
+                  action: {
+                    open: {
+                      frame: 'drawer',
+                      params: 'path',
+                    },
+                  },
+                },
+              ],
+            },
+            {
+              name: 'Rapid Recorder',
+              children: [
+                {
+                  name: '紹介ポスター.ai',
+                  action: {
+                    open: {
+                      frame: 'drawer',
+                      params: 'path',
+                    },
+                  },
+                },
+              ],
+            },
+            {
+              name: 'Visifolio',
+              children: [
+                {
+                  name: '紹介ポスター.ai',
+                  action: {
+                    open: {
+                      frame: 'drawer',
+                      params: 'path',
+                    },
+                  },
+                },
+              ],
+            },
+            {
+              name: 'どこかのチケット',
+              children: [
+                {
+                  name: '紹介ポスター.ai',
+                  action: {
+                    open: {
+                      frame: 'drawer',
+                      params: 'path',
+                    },
+                  },
+                },
+              ],
+            },
+            {
+              name: '風土FOOD',
+              children: [
+                {
+                  name: '紹介ポスター.ai',
+                  action: {
+                    open: {
+                      frame: 'drawer',
+                      params: 'path',
+                    },
+                  },
+                },
+              ],
+            },
+          ],
         },
       ],
     },
@@ -87,7 +528,26 @@ export const directoryTree: Directory = {
         },
         {
           name: 'FUN!tasista! 2024.2',
-          children: [],
+          children: [
+            {
+              name: '作品紹介動画.mp4',
+              action: {
+                open: {
+                  frame: 'player',
+                  params: 'path',
+                },
+              },
+            },
+            {
+              name: 'ポスター.ai',
+              action: {
+                open: {
+                  frame: 'drawer',
+                  params: 'path',
+                },
+              },
+            },
+          ],
         },
       ],
     },
@@ -95,8 +555,8 @@ export const directoryTree: Directory = {
       name: 'バイト 作業用.ai',
       action: {
         open: {
-          frame: 'counter',
-          params: [],
+          frame: 'drawer',
+          params: 'path',
         },
       },
     },

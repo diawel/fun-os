@@ -4,3 +4,9 @@
   margin: 0;
   font-family: heisei-maru-gothic-std, sans-serif;
 }
+
+html,
+body {
+  height: 100%;
+  overflow: hidden;
+}
