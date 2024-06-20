@@ -187,7 +187,17 @@ export const directoryTree: Directory = {
         },
         {
           name: 'FUN!tasista! 2024.2',
-          children: [],
+          children: [
+            {
+              name: '作品紹介動画.mp4',
+              action: {
+                open: {
+                  frame: 'player',
+                  params: 'path',
+                },
+              },
+            },
+          ],
         },
       ],
     },
