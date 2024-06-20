@@ -15,6 +15,50 @@ import Funtasista4 from './assets/albumImage/Funtasista/image_4.png'
 import Funtasista5 from './assets/albumImage/Funtasista/image_5.png'
 import Funtasista6 from './assets/albumImage/Funtasista/image_6.png'
 
+import NobiPhoto1 from './assets/PhotoImage/Nobi/Image_1.png'
+import NobiPhoto2 from './assets/PhotoImage/Nobi/Image_2.png'
+import NobiPhoto3 from './assets/PhotoImage/Nobi/Image_3.png'
+import NobiPhoto4 from './assets/PhotoImage/Nobi/Image_4.png'
+import NobiPhoto5 from './assets/PhotoImage/Nobi/Image_5.png'
+import NobiPhoto6 from './assets/PhotoImage/Nobi/Image_6.png'
+import NobiPhoto7 from './assets/PhotoImage/Nobi/Image_7.png'
+import NobiPhoto8 from './assets/PhotoImage/Nobi/Image_8.png'
+import NobiPhoto9 from './assets/PhotoImage/Nobi/Image_9.png'
+import NobiPhoto10 from './assets/PhotoImage/Nobi/Image_10.png'
+import NobiPhoto11 from './assets/PhotoImage/Nobi/Image_11.png'
+import NobiPhoto12 from './assets/PhotoImage/Nobi/Image_12.png'
+import NobiPhoto13 from './assets/PhotoImage/Nobi/Image_13.png'
+import NobiPhoto14 from './assets/PhotoImage/Nobi/Image_14.png'
+import NobiPhoto15 from './assets/PhotoImage/Nobi/Image_15.png'
+import NobiPhoto16 from './assets/PhotoImage/Nobi/Image_16.png'
+import NobiPhoto17 from './assets/PhotoImage/Nobi/Image_17.png'
+import NobiPhoto18 from './assets/PhotoImage/Nobi/Image_18.png'
+import NobiPhoto19 from './assets/PhotoImage/Nobi/Image_19.png'
+import NobiPhoto20 from './assets/PhotoImage/Nobi/Image_20.png'
+import NobiPhoto21 from './assets/PhotoImage/Nobi/Image_21.png'
+import NobiPhoto22 from './assets/PhotoImage/Nobi/Image_22.png'
+import NobiPhoto23 from './assets/PhotoImage/Nobi/Image_23.png'
+import NobiPhoto24 from './assets/PhotoImage/Nobi/Image_24.png'
+import NobiPhoto25 from './assets/PhotoImage/Nobi/Image_25.png'
+import NobiPhoto26 from './assets/PhotoImage/Nobi/Image_26.png'
+import NobiPhoto27 from './assets/PhotoImage/Nobi/Image_27.png'
+import NobiPhoto28 from './assets/PhotoImage/Nobi/Image_28.png'
+import NobiPhoto29 from './assets/PhotoImage/Nobi/Image_29.png'
+import NobiPhoto30 from './assets/PhotoImage/Nobi/Image_30.png'
+import NobiPhoto31 from './assets/PhotoImage/Nobi/Image_31.png'
+import NobiPhoto32 from './assets/PhotoImage/Nobi/Image_32.png'
+import NobiPhoto33 from './assets/PhotoImage/Nobi/Image_33.png'
+import NobiPhoto34 from './assets/PhotoImage/Nobi/Image_34.png'
+import NobiPhoto35 from './assets/PhotoImage/Nobi/Image_35.png'
+import NobiPhoto36 from './assets/PhotoImage/Nobi/Image_36.png'
+import NobiPhoto37 from './assets/PhotoImage/Nobi/Image_37.png'
+import NobiPhoto38 from './assets/PhotoImage/Nobi/Image_38.png'
+import NobiPhoto39 from './assets/PhotoImage/Nobi/Image_39.png'
+import NobiPhoto40 from './assets/PhotoImage/Nobi/Image_40.png'
+import NobiPhoto41 from './assets/PhotoImage/Nobi/Image_41.png'
+import NobiPhoto42 from './assets/PhotoImage/Nobi/Image_42.png'
+import NobiPhoto43 from './assets/PhotoImage/Nobi/Image_43.png'
+
 import VirtualCreaturePhoto1 from './assets/PhotoImage/VirtualCreature/Image_1.png'
 import VirtualCreaturePhoto2 from './assets/PhotoImage/VirtualCreature/Image_2.png'
 import VirtualCreaturePhoto3 from './assets/PhotoImage/VirtualCreature/Image_3.png'
@@ -140,4 +184,50 @@ export const virtualCreaturePhotoList: string[] = [
   VirtualCreaturePhoto41,
   VirtualCreaturePhoto42,
   VirtualCreaturePhoto43,
+]
+
+export const NobiPhotoList: string[] = [
+  NobiPhoto1,
+  NobiPhoto2,
+  NobiPhoto3,
+  NobiPhoto4,
+  NobiPhoto5,
+  NobiPhoto6,
+  NobiPhoto7,
+  NobiPhoto8,
+  NobiPhoto9,
+  NobiPhoto10,
+  NobiPhoto11,
+  NobiPhoto12,
+  NobiPhoto13,
+  NobiPhoto14,
+  NobiPhoto15,
+  NobiPhoto16,
+  NobiPhoto17,
+  NobiPhoto18,
+  NobiPhoto19,
+  NobiPhoto20,
+  NobiPhoto21,
+  NobiPhoto22,
+  NobiPhoto23,
+  NobiPhoto24,
+  NobiPhoto25,
+  NobiPhoto26,
+  NobiPhoto27,
+  NobiPhoto28,
+  NobiPhoto29,
+  NobiPhoto30,
+  NobiPhoto31,
+  NobiPhoto32,
+  NobiPhoto33,
+  NobiPhoto34,
+  NobiPhoto35,
+  NobiPhoto36,
+  NobiPhoto37,
+  NobiPhoto38,
+  NobiPhoto39,
+  NobiPhoto40,
+  NobiPhoto41,
+  NobiPhoto42,
+  NobiPhoto43,
 ]
