@@ -36,6 +36,7 @@ export const sidebarButton = style({
 
 export const main = style({
   overflowY: 'auto',
+  scrollbarWidth: 'none',
 })
 
 export const navbar = style({

@@ -6,10 +6,13 @@ import Album from './components/Album'
 import PhotosView from './components/PhotosView'
 import { virtalCreatureList, nobiList, funtasistaList } from './utils'
 
+import { virtualCreaturePhotoList } from './utils'
+
 const Photos: FrameContent = ({ params }) => {
   const { transition } = useFrame()
 
   const currentDirectory = findDirectory(directoryTree, params)
+
   return (
     <div className={styles.frame}>
       <div className={styles.sidebar}>
@@ -48,7 +51,7 @@ const Photos: FrameContent = ({ params }) => {
         )}
         {currentDirectory?.name === 'アルバム' && <Album />}
         {currentDirectory?.name === '仮想生物' && (
-          <PhotosView imagePathList={virtalCreatureList.imagePathList} />
+          <PhotosView imagePathList={virtualCreaturePhotoList} />
         )}
         {currentDirectory?.name === '「のび」' && (
           <PhotosView imagePathList={nobiList.imagePathList} />
