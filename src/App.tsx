@@ -5,6 +5,7 @@ import { counterValidator } from './frames/Counter/validator'
 import Files from './frames/Files'
 import { filesValidator } from './frames/Files/validator'
 import Player from './frames/Player'
+import { playerValidator } from './frames/Player/validator'
 
 import Website from './frames/Website'
 import { websiteValidator } from './frames/Website/validator'
@@ -27,6 +28,7 @@ const App = () => {
         },
         player: {
           frame: Player,
+          validator: playerValidator,
         },
       }}
     >
