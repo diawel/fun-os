@@ -5,3 +5,11 @@ export const video = style({
   aspectRatio: '16 / 9',
   marginBottom: -8,
 })
+
+export const error = style({
+  width: 720,
+  aspectRatio: '16 / 9',
+  display: 'flex',
+  alignItems: 'center',
+  justifyContent: 'center',
+})
