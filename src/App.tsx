@@ -36,9 +36,7 @@ const App = () => {
       <Open
         frame="player"
         params={[
-          encodeURIComponent(
-            'https://fundesign-os.g.kuroco-img.app/files/user/videos/funtasista/playlist.m3u8'
-          ),
+          'https://fundesign-os.g.kuroco-img.app/files/user/videos/funtasista/playlist.m3u8',
         ]}
       >
         Open Player

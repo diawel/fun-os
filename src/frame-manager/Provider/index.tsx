@@ -95,7 +95,9 @@ const Provider = ({ children, frames }: ProviderProps) => {
       window.history[options?.replace ? 'replaceState' : 'pushState'](
         { frameStack },
         '',
-        `/${frame}/${params.join('/')}`
+        `/${frame}/${params
+          .map((param) => encodeURIComponent(param))
+          .join('/')}`
       )
     }
     setFrameStack(frameStack)
@@ -189,10 +191,7 @@ const Provider = ({ children, frames }: ProviderProps) => {
             }}
             {...{ position }}
           >
-            <Component
-              key={key}
-              params={params.map((param) => decodeURIComponent(param))}
-            />
+            <Component key={key} {...{ params }} />
           </Frame>
         )
       })}
