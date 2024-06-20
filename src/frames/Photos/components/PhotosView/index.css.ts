@@ -13,7 +13,7 @@ export const image = style({
 })
 
 export const modal = style({
-  position: 'fixed',
+  position: 'absolute',
   top: 0,
   left: 0,
   width: '100%',
@@ -22,6 +22,7 @@ export const modal = style({
   display: 'flex',
   justifyContent: 'center',
   alignItems: 'center',
+  zIndex: 1000,
 })
 
 export const modalContent = style({

@@ -35,16 +35,19 @@ const PhotosView = ({ imagePathList }: PhotosViewProps) => {
   }
 
   return (
-    <div className={styles.photos}>
-      {imagePathList.map((imagePath, index) => (
-        <img
-          key={index}
-          className={styles.image}
-          src={imagePath}
-          alt=""
-          onClick={() => openModal(index)}
-        />
-      ))}
+    <div>
+      <div className={styles.photos}>
+        {imagePathList.map((imagePath, index) => (
+          <img
+            key={index}
+            className={styles.image}
+            src={imagePath}
+            alt=""
+            onClick={() => openModal(index)}
+          />
+        ))}
+      </div>
+
       {isModalOpen && (
         <div className={styles.modal} onClick={handleBackgroundClick}>
           <div className={styles.modalContent}>
