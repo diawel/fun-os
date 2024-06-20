@@ -2,7 +2,7 @@ import { style } from '@vanilla-extract/css'
 
 export const frame = style({
   width: 700,
-  height: 400,
+  height: 700,
   justifyContent: 'center',
   gap: 10,
   overflow: 'auto',
@@ -17,9 +17,7 @@ export const mainContainer = style({
   paddingBottom: '31px',
 })
 
-export const timelineContainer = style({
-
-})
+export const timelineContainer = style({})
 
 export const contentCardContainer = style({
   paddingLeft: '23px',
