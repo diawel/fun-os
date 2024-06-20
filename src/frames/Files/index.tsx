@@ -68,7 +68,12 @@ const Files: FrameContent = ({ params }) => {
                   }
                   label={child.name}
                   onOpen={() => {
-                    open(child.action.open.frame, child.action.open.params)
+                    open(
+                      child.action.open.frame,
+                      child.action.open.params === 'path'
+                        ? [...params, child.name]
+                        : child.action.open.params
+                    )
                   }}
                 />
               ) : (

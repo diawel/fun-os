@@ -4,7 +4,8 @@ import Counter from './frames/Counter'
 import { counterValidator } from './frames/Counter/validator'
 import Files from './frames/Files'
 import { filesValidator } from './frames/Files/validator'
-import Player from './frames/Video'
+import Player from './frames/Player'
+import { playerValidator } from './frames/Player/validator'
 
 import Website from './frames/Website'
 import { websiteValidator } from './frames/Website/validator'
@@ -27,20 +28,14 @@ const App = () => {
         },
         player: {
           frame: Player,
+          validator: playerValidator,
         },
       }}
     >
       <Open frame="counter">Open Counter</Open>
       <Open frame="files">Open Files</Open>
       <Open frame="website">Open Website</Open>
-      <Open
-        frame="player"
-        params={[
-          'https://fundesign-os.g.kuroco-img.app/files/user/videos/funtasista/playlist.m3u8',
-        ]}
-      >
-        Open Player
-      </Open>
+      <Open frame="player">Open Player</Open>
     </Provider>
   )
 }
