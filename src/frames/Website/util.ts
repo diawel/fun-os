@@ -33,7 +33,7 @@ export const contentCardData: ContentCardDataProps[] = [
     imagePath: Image2,
     buttonLabel: ['成果物を見る', '作業データを見る'],
     buttonAction: [
-      { frame: '', params: [] }, // wip
+      { frame: 'photos', params: ['「のび」'] }, // wip
       { frame: 'files', params: ['授業', '情報デザインⅠ'] },
     ],
   },
