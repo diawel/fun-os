@@ -32,12 +32,14 @@ export const mediapool = style({
   backgroundColor: '#303540',
   display: 'flex',
   flexWrap: 'wrap',
+  alignContent: 'flex-start',
 })
 
 export const mediapoolItem = style({
   width: 100,
   aspectRatio: '16 / 9',
   objectFit: 'cover',
+  borderRadius: 5,
 })
 
 export const timeline = style({
@@ -73,6 +75,7 @@ export const timelineChapterLine = style({
 export const chapterBox = style({
   position: 'absolute',
   height: '100%',
+  cursor: 'pointer',
 })
 
 const timelineLabelBase = style({
@@ -83,12 +86,19 @@ const timelineLabelBase = style({
   fontSize: 12,
   fontWeight: 'bold',
   color: '#fff',
+  whiteSpace: 'nowrap',
+  overflow: 'hidden',
 })
 
 export const timelineLabel = styleVariants({
   chapter: [
     timelineLabelBase,
-    { backgroundColor: '#E80E69', width: 'fit-content', height: 24 },
+    {
+      backgroundColor: '#E80E69',
+      width: 'fit-content',
+      height: 24,
+      maxWidth: '100%',
+    },
   ],
   se: [
     timelineLabelBase,
