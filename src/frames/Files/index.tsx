@@ -6,6 +6,30 @@ import returnButton from './returnButton.svg'
 import Icon from '@/components/Icon'
 import EntityButton from '@/components/EntityButton'
 
+const test = [
+  '授業/情報表現基礎Ⅲ/ぽりりずむ/架空大会ポスター.ai',
+  '授業/情報表現基礎Ⅲ/ぽりりずむ/紹介動画.mp4',
+  '授業/情報表現基礎Ⅲ/チエカバナナ/紹介動画.mp4',
+  '授業/情報表現基礎Ⅲ/チエカバナナ/紹介ポスター.ai',
+  '授業/情報表現基礎Ⅲ/チエカバナナ/架空大会ポスター.ai',
+  '授業/情報表現基礎Ⅲ/WORD HUNTER/紹介動画.mp4',
+  '授業/情報表現基礎Ⅲ/WORD HUNTER/紹介ポスター.ai',
+  '授業/情報表現基礎Ⅲ/WORD HUNTER/架空大会ポスター.ai',
+  '授業/情報表現基礎Ⅲ/DATU/紹介動画.mp4',
+  '授業/情報表現基礎Ⅲ/DATU/紹介ポスター.ai',
+  '授業/情報表現基礎Ⅲ/DATU/架空大会ポスター.ai',
+  '授業/情報表現基礎Ⅲ/Byte/紹介動画.mp4',
+  '授業/情報表現基礎Ⅲ/Byte/紹介ポスター.ai',
+  '授業/情報表現基礎Ⅲ/Byte/架空大会ポスター.ai',
+  '授業/情報デザインⅡ/DELI REPI/紹介動画.mp4',
+  '授業/情報デザインⅡ/DELI REPI/紹介ポスター.ai',
+  '授業/情報デザインⅡ/風土FOOD/紹介ポスター.ai',
+  '授業/情報デザインⅡ/Visifolio/紹介ポスター.ai',
+  '授業/情報デザインⅡ/LatteLink/紹介ポスター.ai',
+  '授業/情報デザインⅠ/ベンチ、なぜここに？.ai',
+  '授業/情報デザインⅠ/MIKKE MIHARA to MIRAI/印刷用.ai',
+]
+
 const Files: FrameContent = ({ params }) => {
   const { transition, open } = useFrame()
 
@@ -68,6 +92,37 @@ const Files: FrameContent = ({ params }) => {
                   }
                   label={child.name}
                   onOpen={() => {
+                    if (
+                      child.action.open.frame === 'editor' ||
+                      child.action.open.frame === 'drawer'
+                    ) {
+                      if (window.localStorage.getItem('TEST') === 'A') {
+                        if (!test.includes([...params, child.name].join('/'))) {
+                          open(
+                            child.action.open.frame === 'editor'
+                              ? 'player'
+                              : 'preview',
+                            child.action.open.params === 'path'
+                              ? [...params, child.name]
+                              : child.action.open.params
+                          )
+                          return
+                        }
+                      }
+                      if (window.localStorage.getItem('TEST') === 'B') {
+                        if (test.includes([...params, child.name].join('/'))) {
+                          open(
+                            child.action.open.frame === 'editor'
+                              ? 'player'
+                              : 'preview',
+                            child.action.open.params === 'path'
+                              ? [...params, child.name]
+                              : child.action.open.params
+                          )
+                          return
+                        }
+                      }
+                    }
                     open(
                       child.action.open.frame,
                       child.action.open.params === 'path'
