@@ -45,10 +45,10 @@ export const directoryTree: Directory = {
         },
       ],
     },
-    // {
-    //   name: '「のび」',
-    //   children: [],
-    // },
+    {
+      name: '「のび」',
+      children: [],
+    },
     {
       name: 'FUN!tasista!',
       children: [],
