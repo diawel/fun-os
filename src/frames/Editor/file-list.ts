@@ -1,8 +1,8 @@
 export const fileList = {
   // '展示会/FUN!tasista! 2024.2/作品紹介動画.mp4':
-  //   'https://fundesign-os.g.kuroco-img.app/files/user/videos/funtasista/playlist.m3u8',
+  //   '/file-contents/mp4/funtasista/playlist.m3u8',
   '授業/情報表現基礎Ⅲ/5to1/紹介動画.mp4': {
-    src: 'https://fundesign-os.g.kuroco-img.app/files/user/videos/5to1.mp4',
+    src: '/file-contents/mp4/5to1.mp4',
     thumbnails: [...Array(6)].map(
       (_, i) => new URL(`./thumbnails/5to1/${i}.png`, import.meta.url).href
     ),
@@ -36,7 +36,7 @@ export const fileList = {
     bgm: [[0.0, 124.26]],
   },
   '授業/情報表現基礎Ⅲ/Byte/紹介動画.mp4': {
-    src: 'https://fundesign-os.g.kuroco-img.app/files/user/videos/Byte.mp4',
+    src: '/file-contents/mp4/byte.mp4',
     thumbnails: [...Array(5)].map(
       (_, i) => new URL(`./thumbnails/byte/${i}.png`, import.meta.url).href
     ),
@@ -70,7 +70,7 @@ export const fileList = {
     ],
   },
   '授業/情報表現基礎Ⅲ/チエカバナナ/紹介動画.mp4': {
-    src: 'https://fundesign-os.g.kuroco-img.app/files/user/videos/chiekabanana.mp4',
+    src: '/file-contents/mp4/chiekabanana.mp4',
     thumbnails: [...Array(6)].map(
       (_, i) =>
         new URL(`./thumbnails/chiekabanana/${i}.png`, import.meta.url).href
@@ -113,7 +113,7 @@ export const fileList = {
     ],
   },
   '授業/情報表現基礎Ⅲ/DATU/紹介動画.mp4': {
-    src: 'https://fundesign-os.g.kuroco-img.app/files/user/videos/DATU.mp4',
+    src: '/file-contents/mp4/datu.mp4',
     thumbnails: [...Array(6)].map(
       (_, i) => new URL(`./thumbnails/datu/${i}.png`, import.meta.url).href
     ),
@@ -147,7 +147,7 @@ export const fileList = {
     bgm: [[0.0, 122.93]],
   },
   '授業/情報表現基礎Ⅲ/ゴーストれ！/紹介動画.mp4': {
-    src: 'https://fundesign-os.g.kuroco-img.app/files/user/videos/ghostre.mp4',
+    src: '/file-contents/mp4/ghostre.mp4',
     thumbnails: [...Array(6)].map(
       (_, i) => new URL(`./thumbnails/ghostre/${i}.png`, import.meta.url).href
     ),
@@ -186,7 +186,7 @@ export const fileList = {
     bgm: [[0.0, 120.0]],
   },
   '授業/情報表現基礎Ⅲ/INTERSTELLAR/紹介動画.mp4': {
-    src: 'https://fundesign-os.g.kuroco-img.app/files/user/videos/INTERSTELLAR.mp4',
+    src: '/file-contents/mp4/interstellar.mp4',
     thumbnails: [...Array(6)].map(
       (_, i) =>
         new URL(`./thumbnails/interstellar/${i}.png`, import.meta.url).href
@@ -226,7 +226,7 @@ export const fileList = {
     bgm: [[0.0, 120.0]],
   },
   '授業/情報表現基礎Ⅲ/ぽりりずむ/紹介動画.mp4': {
-    src: 'https://fundesign-os.g.kuroco-img.app/files/user/videos/polyrhythm.mp4',
+    src: '/file-contents/mp4/polyrhythm.mp4',
     thumbnails: [...Array(6)].map(
       (_, i) =>
         new URL(`./thumbnails/polyrhythm/${i}.png`, import.meta.url).href
@@ -270,7 +270,7 @@ export const fileList = {
     ],
   },
   '授業/情報表現基礎Ⅲ/SAMURAI SHADOWS/紹介動画.mp4': {
-    src: 'https://fundesign-os.g.kuroco-img.app/files/user/videos/SAMURAI-SHADOWS.mp4',
+    src: '/file-contents/mp4/samuraishadows.mp4',
     thumbnails: [...Array(6)].map(
       (_, i) =>
         new URL(`./thumbnails/samuraishadows/${i}.png`, import.meta.url).href
@@ -305,7 +305,7 @@ export const fileList = {
     bgm: [[0.0, 120.73]],
   },
   '授業/情報表現基礎Ⅲ/ツミ！/紹介動画.mp4': {
-    src: 'https://fundesign-os.g.kuroco-img.app/files/user/videos/tsumi.mp4',
+    src: '/file-contents/mp4/tsumi.mp4',
     thumbnails: [...Array(7)].map(
       (_, i) => new URL(`./thumbnails/tsumi/${i}.png`, import.meta.url).href
     ),
@@ -347,7 +347,7 @@ export const fileList = {
     bgm: [[9.15, 108.54]],
   },
   '授業/情報表現基礎Ⅲ/WORD HUNTER/紹介動画.mp4': {
-    src: 'https://fundesign-os.g.kuroco-img.app/files/user/videos/WORD-HUNTER.mp4',
+    src: '/file-contents/mp4/wordhunter.mp4',
     thumbnails: [...Array(5)].map(
       (_, i) =>
         new URL(`./thumbnails/wordhunter/${i}.png`, import.meta.url).href
