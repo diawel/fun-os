@@ -451,6 +451,15 @@ export const directoryTree: Directory = {
                     },
                   },
                 },
+                {
+                  name: '紹介スライド.pdf',
+                  action: {
+                    open: {
+                      frame: 'browser',
+                      params: 'path',
+                    },
+                  },
+                },
               ],
             },
             {
@@ -461,6 +470,15 @@ export const directoryTree: Directory = {
                   action: {
                     open: {
                       frame: 'drawer',
+                      params: 'path',
+                    },
+                  },
+                },
+                {
+                  name: '紹介スライド.pdf',
+                  action: {
+                    open: {
+                      frame: 'browser',
                       params: 'path',
                     },
                   },
@@ -479,6 +497,15 @@ export const directoryTree: Directory = {
                     },
                   },
                 },
+                {
+                  name: '紹介スライド.pdf',
+                  action: {
+                    open: {
+                      frame: 'browser',
+                      params: 'path',
+                    },
+                  },
+                },
               ],
             },
             {
@@ -489,6 +516,15 @@ export const directoryTree: Directory = {
                   action: {
                     open: {
                       frame: 'drawer',
+                      params: 'path',
+                    },
+                  },
+                },
+                {
+                  name: '紹介スライド.pdf',
+                  action: {
+                    open: {
+                      frame: 'browser',
                       params: 'path',
                     },
                   },
@@ -507,6 +543,15 @@ export const directoryTree: Directory = {
                     },
                   },
                 },
+                {
+                  name: '紹介スライド.pdf',
+                  action: {
+                    open: {
+                      frame: 'browser',
+                      params: 'path',
+                    },
+                  },
+                },
               ],
             },
             {
@@ -517,6 +562,15 @@ export const directoryTree: Directory = {
                   action: {
                     open: {
                       frame: 'drawer',
+                      params: 'path',
+                    },
+                  },
+                },
+                {
+                  name: '紹介スライド.pdf',
+                  action: {
+                    open: {
+                      frame: 'browser',
                       params: 'path',
                     },
                   },
@@ -536,11 +590,11 @@ export const directoryTree: Directory = {
                   },
                 },
                 {
-                  name: '紹介Webサイト.webloc',
+                  name: '紹介スライド.pdf',
                   action: {
                     open: {
                       frame: 'browser',
-                      params: ['https://preview.studio.site/live/ogO0w1mNW2/1'],
+                      params: 'path',
                     },
                   },
                 },
@@ -554,6 +608,15 @@ export const directoryTree: Directory = {
                   action: {
                     open: {
                       frame: 'drawer',
+                      params: 'path',
+                    },
+                  },
+                },
+                {
+                  name: '紹介スライド.pdf',
+                  action: {
+                    open: {
+                      frame: 'browser',
                       params: 'path',
                     },
                   },
