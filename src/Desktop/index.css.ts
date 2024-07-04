@@ -11,3 +11,7 @@ export const folderPosition = style({
   justifyContent: 'flex-end',
   padding: '40px 80px 0 0',
 })
+
+export const dockContainer = style({
+  paddingBottom: '20px',
+})

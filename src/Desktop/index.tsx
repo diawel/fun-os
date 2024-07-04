@@ -27,7 +27,9 @@ const Desktop = () => {
           />
         </div>
       </div>
-      {/* <Dock /> */}
+      <div className={styles.dockContainer}>
+        <Dock />
+      </div>
     </div>
   )
 }

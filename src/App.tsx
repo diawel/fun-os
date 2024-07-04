@@ -1,5 +1,4 @@
 import wallpaperImage from './assets/wallpaper.png'
-import Open from './frame-manager/Open'
 import Desktop from './Desktop'
 import Provider from './frame-manager/Provider'
 import Counter from './frames/Counter'
@@ -65,12 +64,6 @@ const App = () => {
           },
         }}
       >
-        {/* <Open frame="counter">Open Counter</Open>
-        <Open frame="files">Open Files</Open>
-        <Open frame="website">Open Website</Open>
-        <Open frame="player">Open Player</Open>
-        <Open frame="drawer">Open Drawer</Open>
-        <Open frame="photos">Open Photos</Open> */}
         <Desktop />
       </Provider>
     </div>
