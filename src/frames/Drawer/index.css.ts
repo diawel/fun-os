@@ -24,6 +24,8 @@ export const field = style({
   display: 'flex',
   alignItems: 'center',
   justifyContent: 'center',
+  flexDirection: 'column',
+  gap: 8,
   backgroundColor: '#303540',
 })
 
