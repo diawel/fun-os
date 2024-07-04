@@ -30,9 +30,13 @@ const Files: FrameContent = ({ params }) => {
               }}
             >
               <Icon
-                {...(child.icon ?? {
-                  icon: 'folder',
-                })}
+                {...(child.icon
+                  ? child.icon.icon === 'path'
+                    ? { ...child.icon, icon: [...params, child.name].join('/') }
+                    : child.icon
+                  : {
+                      icon: 'folder',
+                    })}
                 size={18}
               />
               {child.name}
@@ -60,9 +64,16 @@ const Files: FrameContent = ({ params }) => {
                 <EntityButton
                   icon={
                     <Icon
-                      {...(child.icon ?? {
-                        icon: 'ordinaryFile',
-                      })}
+                      {...(child.icon
+                        ? child.icon.icon === 'path'
+                          ? {
+                              ...child.icon,
+                              icon: [...params, child.name].join('/'),
+                            }
+                          : child.icon
+                        : {
+                            icon: 'ordinaryFile',
+                          })}
                       size={72}
                     />
                   }

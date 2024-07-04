@@ -19,6 +19,8 @@ import { browserValidator } from './frames/Browser/validator'
 import Desktop from './frame-manager/Desktop'
 import Trash from './frames/Trash'
 import { trashValidator } from './frames/Trash/validator'
+import Pdf from './frames/Pdf'
+import { pdfValidator } from './frames/Pdf/validator'
 
 const App = () => {
   const style = {
@@ -71,6 +73,11 @@ const App = () => {
           trash: {
             frame: Trash,
             validator: trashValidator,
+          },
+          pdf: {
+            frame: Pdf,
+            validator: pdfValidator,
+            replacableEmpty: true,
           },
         }}
       >
