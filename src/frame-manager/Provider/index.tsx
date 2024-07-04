@@ -1,5 +1,5 @@
 import Frame from '@/frame-manager/Frame'
-import { Attributes, useEffect, useState } from 'react'
+import { useEffect, useState } from 'react'
 import { FrameContext } from './frame-context'
 
 type FrameProps = {
@@ -11,7 +11,7 @@ export type ParamValidator = (params: string[]) => string[]
 type FrameNode = {
   frame: string
   params: string[]
-  key: Attributes['key']
+  key: number
   position: { x: number; y: number }
 }
 type Frames = {
@@ -175,26 +175,30 @@ const Provider = ({ children, frames }: ProviderProps) => {
   return (
     <FrameContext.Provider value={{ open, transition }}>
       {children}
-      {frameStack.map(({ frame, params, key, position }, index) => {
-        const { frame: Component } = frames[frame]
-        const isActive = index === frameStack.length - 1
-        return (
-          <Frame
-            key={key}
-            state={isActive ? 'active' : 'inactive'}
-            onFocus={() => (isActive ? {} : focus(index))}
-            onClose={() => close(index)}
-            onMove={(position) => {
-              const modifiedFrameStack = [...frameStack]
-              modifiedFrameStack[index].position = position
-              navigate(modifiedFrameStack, { replace: true })
-            }}
-            {...{ position }}
-          >
-            <Component key={key} {...{ params }} />
-          </Frame>
-        )
-      })}
+      {frameStack
+        .map((frameNode, index) => ({ ...frameNode, nodeIndex: index }))
+        .sort((a, b) => a.key - b.key)
+        .map(({ frame, params, key, position, nodeIndex }) => {
+          const { frame: Component } = frames[frame]
+          const isActive = nodeIndex === frameStack.length - 1
+          return (
+            <Frame
+              key={key}
+              state={isActive ? 'active' : 'inactive'}
+              onFocus={() => (isActive ? {} : focus(nodeIndex))}
+              onClose={() => close(nodeIndex)}
+              onMove={(position) => {
+                const modifiedFrameStack = [...frameStack]
+                modifiedFrameStack[nodeIndex].position = position
+                navigate(modifiedFrameStack, { replace: true })
+              }}
+              priority={nodeIndex}
+              {...{ position }}
+            >
+              <Component key={key} {...{ params }} />
+            </Frame>
+          )
+        })}
     </FrameContext.Provider>
   )
 }

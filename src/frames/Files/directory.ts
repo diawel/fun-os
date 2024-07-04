@@ -499,6 +499,15 @@ export const directoryTree: Directory = {
                     },
                   },
                 },
+                {
+                  name: '紹介Webサイト.webloc',
+                  action: {
+                    open: {
+                      frame: 'browser',
+                      params: ['https://preview.studio.site/live/ogO0w1mNW2/1'],
+                    },
+                  },
+                },
               ],
             },
             {
@@ -544,6 +553,15 @@ export const directoryTree: Directory = {
                 open: {
                   frame: 'drawer',
                   params: 'path',
+                },
+              },
+            },
+            {
+              name: 'Webサイト.webloc',
+              action: {
+                open: {
+                  frame: 'browser',
+                  params: ['https://fundesign.jp/miraiten2024w'],
                 },
               },
             },

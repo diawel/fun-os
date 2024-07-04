@@ -1,5 +1,7 @@
 import Open from './frame-manager/Open'
 import Provider from './frame-manager/Provider'
+import Browser from './frames/Browser'
+import { browserValidator } from './frames/Browser/validator'
 import Counter from './frames/Counter'
 import { counterValidator } from './frames/Counter/validator'
 import Drawer from './frames/Drawer'
@@ -34,6 +36,10 @@ const App = () => {
         drawer: {
           frame: Drawer,
           validator: drawerValidator,
+        },
+        browser: {
+          frame: Browser,
+          validator: browserValidator,
         },
       }}
     >
