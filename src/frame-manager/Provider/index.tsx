@@ -19,6 +19,7 @@ type Frames = {
     frame: FrameContent
     validator?: ParamValidator
     backgroundColor?: string
+    replacableEmpty?: boolean
   }
 }
 
@@ -114,7 +115,7 @@ const Provider = ({ children, frames }: ProviderProps) => {
         ? {
             x:
               ((frameStack[frameStack.length - 1].position.x - 0.03) % 0.9) +
-              0.05,
+              0.1,
             y:
               ((frameStack[frameStack.length - 1].position.y - 0.03) % 0.9) +
               0.05,
@@ -124,7 +125,25 @@ const Provider = ({ children, frames }: ProviderProps) => {
     const sameFrameIndex = findSameFrameIndex(frameStack, currentFrame)
 
     if (sameFrameIndex === -1)
-      navigate([...frameStack, { ...currentFrame }], options)
+      if (frames[frame].replacableEmpty) {
+        const emptyFrameIndex = frameStack.findIndex(
+          (frameNode) =>
+            frame === frameNode.frame && frameNode.params.length === 0
+        )
+        if (emptyFrameIndex !== -1)
+          navigate(
+            [
+              ...frameStack.slice(0, emptyFrameIndex),
+              ...frameStack.slice(emptyFrameIndex + 1),
+              {
+                ...currentFrame,
+                position: frameStack[emptyFrameIndex].position,
+              },
+            ],
+            options
+          )
+        else navigate([...frameStack, { ...currentFrame }], options)
+      } else navigate([...frameStack, { ...currentFrame }], options)
     else if (sameFrameIndex < frameStack.length - 1)
       navigate(
         [
