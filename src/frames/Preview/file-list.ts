@@ -2,11 +2,12 @@ export const fileList = {
   '展示会/FUN!tasista! 2024.2/ポスター.ai': '/file-contents/ai/funtasista.png',
   '授業/情報デザインⅠ/MIKKE MIHARA to MIRAI/印刷用.ai':
     '/file-contents/ai/mikkemihara.png',
-  '授業/情報デザインⅠ/SHIKIRI/印刷用.ai': '/file-contents/ai/shikiri.png',
-  '授業/情報デザインⅠ/ブロックいろいろ/印刷用.ai':
-    '/file-contents/ai/blockiroiro.png',
+  '授業/情報デザインⅠ/SHIKIRI/印刷用.ai':
+    '/file-contents/ai/shikiri-preview.jpg',
+  '授業/情報デザインⅠ/産業道路の裏側で/印刷用.ai':
+    '/file-contents/ai/sangyoroad-preview.jpg',
   '授業/情報デザインⅠ/ベンチ、なぜここに？/印刷用.ai':
-    '/file-contents/ai/bench.png',
+    '/file-contents/ai/bench-preview.jpg',
   '授業/情報デザインⅡ/DELI REPI/紹介ポスター.ai':
     '/file-contents/ai/delirepi.png',
   '授業/情報デザインⅡ/LatteLink/紹介ポスター.ai':
@@ -46,8 +47,6 @@ export const fileList = {
     '/file-contents/ai/interstellar-introduction.png',
   '授業/情報表現基礎Ⅲ/INTERSTELLAR/架空大会ポスター.ai':
     '/file-contents/ai/interstellar-poster.png',
-  // '授業/情報表現基礎Ⅲ/ぽりりずむ/紹介ポスター.ai':
-  //   '/file-contents/ai/polyrhythm-introduction.png',
   '授業/情報表現基礎Ⅲ/ぽりりずむ/架空大会ポスター.ai':
     '/file-contents/ai/polyrhythm-poster.png',
   '授業/情報表現基礎Ⅲ/SAMURAI SHADOWS/紹介ポスター.ai':

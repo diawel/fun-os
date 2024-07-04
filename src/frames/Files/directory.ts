@@ -55,7 +55,7 @@ export const directoryTree: Directory = {
               ],
             },
             {
-              name: 'ブロックいろいろ',
+              name: '産業道路の裏側で',
               children: [
                 {
                   name: '印刷用.ai',
