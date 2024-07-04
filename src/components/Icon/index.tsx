@@ -1,7 +1,7 @@
 import * as styles from './index.css'
 import folder from './folder.png'
 import ordinaryFile from './ordinaryFile.png'
-import browzer from './browzer.png'
+import browser from './browser.png'
 import drawer from './drawer.png'
 import finder from './finder.png'
 import player from './player.png'
@@ -13,7 +13,7 @@ import editor from './editor.png'
 const icons = {
   folder: folder,
   ordinaryFile: ordinaryFile,
-  browzer: browzer,
+  browser: browser,
   drawer: drawer,
   finder: finder,
   player: player,

@@ -1,8 +1,6 @@
 import wallpaperImage from './assets/wallpaper.png'
 import Desktop from './Desktop'
 import Provider from './frame-manager/Provider'
-import Browser from './frames/Browser'
-import { browserValidator } from './frames/Browser/validator'
 import Counter from './frames/Counter'
 import { counterValidator } from './frames/Counter/validator'
 import Drawer from './frames/Drawer'
@@ -11,14 +9,14 @@ import Files from './frames/Files'
 import { filesValidator } from './frames/Files/validator'
 import Player from './frames/Player'
 import { playerValidator } from './frames/Player/validator'
-import Website from './frames/Website'
-import { websiteValidator } from './frames/Website/validator'
 import Photos from './frames/Photos'
 import { photosValidator } from './frames/Photos/validator'
 import Editor from './frames/Editor'
 import { editorValidator } from './frames/Editor/validator'
 import Preview from './frames/Preview'
 import { previewValidator } from './frames/Preview/validator'
+import Browser from './frames/Browser'
+import { browserValidator } from './frames/Browser/validator'
 
 const App = () => {
   const style = {
@@ -40,10 +38,6 @@ const App = () => {
             frame: Files,
             validator: filesValidator,
           },
-          website: {
-            frame: Website,
-            validator: websiteValidator,
-          },
           photos: {
             frame: Photos,
             validator: photosValidator,
@@ -63,6 +57,10 @@ const App = () => {
           preview: {
             frame: Preview,
             validator: previewValidator,
+          },
+          browser: {
+            frame: Browser,
+            validator: browserValidator,
           },
         }}
       >

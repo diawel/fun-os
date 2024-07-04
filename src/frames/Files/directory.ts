@@ -38,6 +38,15 @@ export const directoryTree: Directory = {
                     },
                   },
                 },
+                {
+                  name: 'フィールドノート.pdf',
+                  action: {
+                    open: {
+                      frame: 'browser',
+                      params: 'path',
+                    },
+                  },
+                },
               ],
             },
             {
@@ -590,6 +599,15 @@ export const directoryTree: Directory = {
                 open: {
                   frame: 'drawer',
                   params: 'path',
+                },
+              },
+            },
+            {
+              name: 'Webサイト.webloc',
+              action: {
+                open: {
+                  frame: 'browser',
+                  params: ['https://fundesign.jp/miraiten2024w/'],
                 },
               },
             },

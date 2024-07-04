@@ -15,9 +15,9 @@ const Dock = () => {
           <Icon icon="drawer" size={72} />
         </div>
       </Open>
-      <Open frame="website">
+      <Open frame="browser">
         <div className={styles.icon}>
-          <Icon icon="browzer" size={72} />
+          <Icon icon="browser" size={72} />
         </div>
       </Open>
       <Open frame="photos">
