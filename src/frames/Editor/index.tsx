@@ -54,6 +54,7 @@ const Editor: FrameContent = ({ params }) => {
               if (!previewRef.current) return
               previewRef.current.currentTime = chapter.time
             }}
+            dark
           />
         ))}
       </div>
