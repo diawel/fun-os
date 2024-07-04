@@ -5,9 +5,10 @@ type EntityButtonProps = {
   icon: React.ReactNode
   label?: React.ReactNode
   onOpen: () => void
+  dark?: boolean
 }
 
-const EntityButton = ({ icon, label, onOpen }: EntityButtonProps) => {
+const EntityButton = ({ icon, label, onOpen, dark }: EntityButtonProps) => {
   const [isSelected, setIsSelected] = useState(false)
 
   const hundleClick = () => {
@@ -24,7 +25,11 @@ const EntityButton = ({ icon, label, onOpen }: EntityButtonProps) => {
       onClick={hundleClick}
       onBlur={() => setIsSelected(false)}
       style={{
-        backgroundColor: isSelected ? 'rgb(0 0 0 / 10%)' : 'transparent',
+        backgroundColor: isSelected
+          ? dark
+            ? 'rgb(255 255 255 / 20%)'
+            : 'rgb(0 0 0 / 10%)'
+          : 'transparent',
       }}
     >
       {icon}

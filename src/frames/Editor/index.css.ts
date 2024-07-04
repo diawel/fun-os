@@ -33,6 +33,7 @@ export const mediapool = style({
   display: 'flex',
   flexWrap: 'wrap',
   alignContent: 'flex-start',
+  overflow: 'auto',
 })
 
 export const mediapoolItem = style({
