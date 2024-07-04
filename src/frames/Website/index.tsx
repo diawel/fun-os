@@ -17,7 +17,7 @@ const Website: FrameContent = () => {
         </div>
         <div className={styles.contentCardContainer}>
           {contentCardData.map((data, index) => (
-            <div className={styles.contentCard}>
+            <div className={styles.contentCard} key={index}>
               <ContentCard key={index} data={data} />
             </div>
           ))}

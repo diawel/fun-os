@@ -55,7 +55,7 @@ export const directoryTree: Directory = {
               ],
             },
             {
-              name: 'ブロックいろいろ',
+              name: '産業道路の裏側で',
               children: [
                 {
                   name: '印刷用.ai',
@@ -94,7 +94,7 @@ export const directoryTree: Directory = {
                   name: '紹介動画.mp4',
                   action: {
                     open: {
-                      frame: 'player',
+                      frame: 'editor',
                       params: 'path',
                     },
                   },
@@ -126,7 +126,7 @@ export const directoryTree: Directory = {
                   name: '紹介動画.mp4',
                   action: {
                     open: {
-                      frame: 'player',
+                      frame: 'editor',
                       params: 'path',
                     },
                   },
@@ -158,7 +158,7 @@ export const directoryTree: Directory = {
                   name: '紹介動画.mp4',
                   action: {
                     open: {
-                      frame: 'player',
+                      frame: 'editor',
                       params: 'path',
                     },
                   },
@@ -190,7 +190,7 @@ export const directoryTree: Directory = {
                   name: '紹介動画.mp4',
                   action: {
                     open: {
-                      frame: 'player',
+                      frame: 'editor',
                       params: 'path',
                     },
                   },
@@ -222,7 +222,7 @@ export const directoryTree: Directory = {
                   name: '紹介動画.mp4',
                   action: {
                     open: {
-                      frame: 'player',
+                      frame: 'editor',
                       params: 'path',
                     },
                   },
@@ -254,7 +254,7 @@ export const directoryTree: Directory = {
                   name: '紹介動画.mp4',
                   action: {
                     open: {
-                      frame: 'player',
+                      frame: 'editor',
                       params: 'path',
                     },
                   },
@@ -286,7 +286,7 @@ export const directoryTree: Directory = {
                   name: '紹介動画.mp4',
                   action: {
                     open: {
-                      frame: 'player',
+                      frame: 'editor',
                       params: 'path',
                     },
                   },
@@ -318,7 +318,7 @@ export const directoryTree: Directory = {
                   name: '紹介動画.mp4',
                   action: {
                     open: {
-                      frame: 'player',
+                      frame: 'editor',
                       params: 'path',
                     },
                   },
@@ -350,7 +350,7 @@ export const directoryTree: Directory = {
                   name: '紹介動画.mp4',
                   action: {
                     open: {
-                      frame: 'player',
+                      frame: 'editor',
                       params: 'path',
                     },
                   },
@@ -373,7 +373,7 @@ export const directoryTree: Directory = {
                   name: '紹介動画.mp4',
                   action: {
                     open: {
-                      frame: 'player',
+                      frame: 'editor',
                       params: 'path',
                     },
                   },
@@ -533,16 +533,12 @@ export const directoryTree: Directory = {
       children: [
         {
           name: 'のび 2023.7',
-          children: [],
-        },
-        {
-          name: 'FUN!tasista! 2024.2',
           children: [
             {
-              name: '作品紹介動画.mp4',
+              name: '会場案内.ai',
               action: {
                 open: {
-                  frame: 'player',
+                  frame: 'drawer',
                   params: 'path',
                 },
               },
@@ -567,13 +563,45 @@ export const directoryTree: Directory = {
             },
           ],
         },
+        {
+          name: 'FUN!tasista! 2024.2',
+          children: [
+            {
+              name: '作品紹介動画.mp4',
+              action: {
+                open: {
+                  frame: 'editor',
+                  params: 'path',
+                },
+              },
+            },
+            {
+              name: 'ポスター.ai',
+              action: {
+                open: {
+                  frame: 'drawer',
+                  params: 'path',
+                },
+              },
+            },
+            {
+              name: '配布カード.ai',
+              action: {
+                open: {
+                  frame: 'drawer',
+                  params: 'path',
+                },
+              },
+            },
+          ],
+        },
       ],
     },
     {
       name: 'バイト 作業用.ai',
       action: {
         open: {
-          frame: 'drawer',
+          frame: 'preview',
           params: 'path',
         },
       },
