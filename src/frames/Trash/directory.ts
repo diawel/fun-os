@@ -19,26 +19,7 @@ type Directory = {
 
 export const directoryTree: Directory = {
   name: 'ごみ箱',
-  children: [
-    {
-      name: '印刷用.ai',
-      action: {
-        open: {
-          frame: 'drawer',
-          params: ['授業', '情報デザインⅠ', 'SHIKIRI', '印刷用.ai'],
-        },
-      },
-    },
-    {
-      name: 'バイト.ai',
-      action: {
-        open: {
-          frame: 'preview',
-          params: ['バイト 作業用.ai'],
-        },
-      },
-    },
-  ],
+  children: [],
 }
 
 export const findDirectory = (
