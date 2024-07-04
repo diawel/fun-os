@@ -1,4 +1,5 @@
-import Open from './frame-manager/Open'
+import wallpaperImage from './assets/wallpaper.png'
+import Desktop from './Desktop'
 import Provider from './frame-manager/Provider'
 import Counter from './frames/Counter'
 import { counterValidator } from './frames/Counter/validator'
@@ -18,50 +19,54 @@ import Preview from './frames/Preview'
 import { previewValidator } from './frames/Preview/validator'
 
 const App = () => {
+  const style = {
+    backgroundImage: `url(${wallpaperImage})`,
+    backgroundSize: 'cover',
+    backgroundPosition: 'center',
+    height: '100vh',
+  }
+
   return (
-    <Provider
-      frames={{
-        counter: {
-          frame: Counter,
-          validator: counterValidator,
-        },
-        files: {
-          frame: Files,
-          validator: filesValidator,
-        },
-        website: {
-          frame: Website,
-          validator: websiteValidator,
-        },
-        photos: {
-          frame: Photos,
-          validator: photosValidator,
-        },
-        player: {
-          frame: Player,
-          validator: playerValidator,
-        },
-        drawer: {
-          frame: Drawer,
-          validator: drawerValidator,
-        },
-        editor: {
-          frame: Editor,
-          validator: editorValidator,
-        },
-        preview: {
-          frame: Preview,
-          validator: previewValidator,
-        },
-      }}
-    >
-      <Open frame="counter">Open Counter</Open>
-      <Open frame="files">Open Files</Open>
-      <Open frame="website">Open Website</Open>
-      <Open frame="player">Open Player</Open>
-      <Open frame="drawer">Open Drawer</Open>
-      <Open frame="photos">Open Photos</Open>
-    </Provider>
+    <div style={style}>
+      <Provider
+        frames={{
+          counter: {
+            frame: Counter,
+            validator: counterValidator,
+          },
+          files: {
+            frame: Files,
+            validator: filesValidator,
+          },
+          website: {
+            frame: Website,
+            validator: websiteValidator,
+          },
+          photos: {
+            frame: Photos,
+            validator: photosValidator,
+          },
+          player: {
+            frame: Player,
+            validator: playerValidator,
+          },
+          drawer: {
+            frame: Drawer,
+            validator: drawerValidator,
+          },
+          editor: {
+            frame: Editor,
+            validator: editorValidator,
+          },
+          preview: {
+            frame: Preview,
+            validator: previewValidator,
+          },
+        }}
+      >
+        <Desktop />
+      </Provider>
+    </div>
   )
 }
 
