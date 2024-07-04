@@ -862,6 +862,9 @@ export const directoryTree: Directory = {
             },
             {
               name: 'Webサイト.webloc',
+              icon: {
+                icon: 'browser',
+              },
               action: {
                 open: {
                   frame: 'browser',
