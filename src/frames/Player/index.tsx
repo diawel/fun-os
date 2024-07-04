@@ -2,10 +2,16 @@ import * as styles from './index.css'
 import { FrameContent } from '@/frame-manager/Provider'
 import Video from '@/components/Video'
 import { fileList } from './file-list'
+import FileSelector from '@/components/FileSelector'
 
 const Player: FrameContent = ({ params }) => {
   if (!(params.join('/') in fileList))
-    return <div className={styles.error}>再生中の動画なし</div>
+    return (
+      <div className={styles.error}>
+        再生中の動画なし
+        <FileSelector />
+      </div>
+    )
 
   return (
     <Video

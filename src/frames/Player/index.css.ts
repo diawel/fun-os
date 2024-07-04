@@ -12,4 +12,6 @@ export const error = style({
   display: 'flex',
   alignItems: 'center',
   justifyContent: 'center',
+  flexDirection: 'column',
+  gap: 8,
 })

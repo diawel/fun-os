@@ -1,10 +1,16 @@
 import { FrameContent } from '@/frame-manager/Provider'
 import * as styles from './index.css'
 import { fileList } from './file-list'
+import FileSelector from '@/components/FileSelector'
 
 const Preview: FrameContent = ({ params }) => {
   if (!(params.join('/') in fileList))
-    return <div className={styles.frame}>ファイルなし</div>
+    return (
+      <div className={styles.frame}>
+        ファイルなし
+        <FileSelector />
+      </div>
+    )
 
   return (
     <img

@@ -47,18 +47,22 @@ const App = () => {
           player: {
             frame: Player,
             validator: playerValidator,
+            replacableEmpty: true,
           },
           drawer: {
             frame: Drawer,
             validator: drawerValidator,
+            replacableEmpty: true,
           },
           editor: {
             frame: Editor,
             validator: editorValidator,
+            replacableEmpty: true,
           },
           preview: {
             frame: Preview,
             validator: previewValidator,
+            replacableEmpty: true,
           },
           browser: {
             frame: Browser,

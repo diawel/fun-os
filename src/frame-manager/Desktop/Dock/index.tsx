@@ -35,7 +35,7 @@ const Dock = () => {
           <Icon icon="player" size={72} />
         </div>
       </Open>
-      <Open frame="editor">
+      <Open frame="preview">
         <div className={styles.icon}>
           <Icon icon="preview" size={72} />
         </div>

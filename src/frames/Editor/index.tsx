@@ -4,6 +4,7 @@ import Video from '@/components/Video'
 import { fileList } from './file-list'
 import EntityButton from '@/components/EntityButton'
 import { useEffect, useRef, useState } from 'react'
+import FileSelector from '@/components/FileSelector'
 
 const Editor: FrameContent = ({ params }) => {
   const previewRef = useRef<HTMLVideoElement>(null)
@@ -32,7 +33,10 @@ const Editor: FrameContent = ({ params }) => {
     return (
       <div className={styles.frame}>
         <div className={styles.mediapool} />
-        <div className={styles.error}>編集中のファイルなし</div>
+        <div className={styles.error}>
+          編集中のファイルなし
+          <FileSelector dark />
+        </div>
         <div className={styles.timeline} />
       </div>
     )

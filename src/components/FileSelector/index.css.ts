@@ -1,17 +1,15 @@
 import { style } from '@vanilla-extract/css'
 
-export const frame = style({
-  width: 400,
-  height: 400,
+export const button = style({
+  padding: 6,
+  border: 'none',
+  borderRadius: 6,
   display: 'flex',
   alignItems: 'center',
   justifyContent: 'center',
+  cursor: 'pointer',
   flexDirection: 'column',
   gap: 8,
-})
-
-export const image = style({
-  maxHeight: '80vh',
-  maxWidth: '80vh',
-  marginBottom: -8,
+  fontWeight: 'bold',
+  fontSize: 12,
 })

@@ -2,6 +2,7 @@ import { FrameContent } from '@/frame-manager/Provider'
 import * as styles from './index.css'
 import { fileList } from './file-list'
 import { useEffect, useRef, useState } from 'react'
+import FileSelector from '@/components/FileSelector'
 
 const Drawer: FrameContent = ({ params }) => {
   const [position, setPosition] = useState({ x: 0, y: 0 })
@@ -58,7 +59,10 @@ const Drawer: FrameContent = ({ params }) => {
   if (!(params.join('/') in fileList))
     return (
       <div className={styles.frame}>
-        <div className={styles.field}>編集中のファイルなし</div>
+        <div className={styles.field}>
+          編集中のファイルなし
+          <FileSelector dark />
+        </div>
         <div className={styles.sidebar}></div>
       </div>
     )
