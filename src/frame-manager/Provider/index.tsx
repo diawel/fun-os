@@ -114,10 +114,10 @@ const Provider = ({ children, frames }: ProviderProps) => {
       position: frameStack.length
         ? {
             x:
-              ((frameStack[frameStack.length - 1].position.x - 0.03) % 0.9) +
+              ((frameStack[frameStack.length - 1].position.x - 0.03) % 0.8) +
               0.1,
             y:
-              ((frameStack[frameStack.length - 1].position.y - 0.03) % 0.9) +
+              ((frameStack[frameStack.length - 1].position.y - 0.03) % 0.85) +
               0.05,
           }
         : { x: 0.05, y: 0.05 },
