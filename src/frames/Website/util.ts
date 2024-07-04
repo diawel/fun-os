@@ -40,8 +40,8 @@ export const contentCardData: ContentCardDataProps[] = [
     subjectDescription:
       '2年前期の終わりには、学生が主体となって、これまでの成果物の展示会を行います。\n外部の方に作品にご覧いただくための会場作りを経験します。',
     imagePath: Image3,
-    buttonLabel: [],
-    buttonAction: [],
+    buttonLabel: ['展示会の様子を見る'],
+    buttonAction: [{ frame: 'files', params: ['展示会', 'のび 2023.7'] }],
   },
   {
     subjectName: '情報表現基礎Ⅲ',
