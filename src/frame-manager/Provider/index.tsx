@@ -54,7 +54,7 @@ const slug = location.pathname.split('/').slice(1).map(decodeURIComponent)
 const getInitialFrameStack = (frames: Frames) => {
   if (history.state?.frameStack) return history.state.frameStack
   console.log(slug)
-  const frame = slug.length && slug[0] ? slug[0] : 'website'
+  const frame = slug.length && slug[0] ? slug[0] : 'browser'
   if (!frames[frame]) {
     window.history.replaceState({ frameStack: [] }, '', '/')
     return []

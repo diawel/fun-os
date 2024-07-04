@@ -1,5 +1,4 @@
 import wallpaperImage from './assets/wallpaper.png'
-import Desktop from './Desktop'
 import Provider from './frame-manager/Provider'
 import Counter from './frames/Counter'
 import { counterValidator } from './frames/Counter/validator'
@@ -17,6 +16,7 @@ import Preview from './frames/Preview'
 import { previewValidator } from './frames/Preview/validator'
 import Browser from './frames/Browser'
 import { browserValidator } from './frames/Browser/validator'
+import Desktop from './frame-manager/Desktop'
 
 const App = () => {
   const style = {
