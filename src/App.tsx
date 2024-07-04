@@ -17,6 +17,8 @@ import Editor from './frames/Editor'
 import { editorValidator } from './frames/Editor/validator'
 import Preview from './frames/Preview'
 import { previewValidator } from './frames/Preview/validator'
+import Trash from './frames/Trash'
+import { trashValidator } from './frames/Trash/validator'
 
 const App = () => {
   const style = {
@@ -61,6 +63,10 @@ const App = () => {
           preview: {
             frame: Preview,
             validator: previewValidator,
+          },
+          trash: {
+            frame: Trash,
+            validator: trashValidator,
           },
         }}
       >
