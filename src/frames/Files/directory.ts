@@ -28,11 +28,14 @@ export const directoryTree: Directory = {
           children: [
             {
               name: 'MIKKE MIHARA to MIRAI',
+              icon: {
+                icon: 'path',
+              },
               children: [
                 {
                   name: '印刷用.ai',
                   icon: {
-                    icon: 'drawer',
+                    icon: 'path',
                   },
                   action: {
                     open: {
@@ -61,7 +64,7 @@ export const directoryTree: Directory = {
                 {
                   name: '印刷用.ai',
                   icon: {
-                    icon: 'drawer',
+                    icon: 'path',
                   },
                   action: {
                     open: {
@@ -89,6 +92,9 @@ export const directoryTree: Directory = {
               children: [
                 {
                   name: '印刷用.ai',
+                  icon: {
+                    icon: 'path',
+                  },
                   action: {
                     open: {
                       frame: 'drawer',
@@ -115,6 +121,9 @@ export const directoryTree: Directory = {
               children: [
                 {
                   name: '印刷用.ai',
+                  icon: {
+                    icon: 'path',
+                  },
                   action: {
                     open: {
                       frame: 'drawer',
@@ -146,6 +155,9 @@ export const directoryTree: Directory = {
               children: [
                 {
                   name: '紹介動画.mp4',
+                  icon: {
+                    icon: 'editor',
+                  },
                   action: {
                     open: {
                       frame: 'editor',
@@ -155,6 +167,9 @@ export const directoryTree: Directory = {
                 },
                 {
                   name: '紹介ポスター.ai',
+                  icon: {
+                    icon: 'path',
+                  },
                   action: {
                     open: {
                       frame: 'drawer',
@@ -164,6 +179,9 @@ export const directoryTree: Directory = {
                 },
                 {
                   name: '架空大会ポスター.ai',
+                  icon: {
+                    icon: 'path',
+                  },
                   action: {
                     open: {
                       frame: 'drawer',
@@ -178,6 +196,9 @@ export const directoryTree: Directory = {
               children: [
                 {
                   name: '紹介動画.mp4',
+                  icon: {
+                    icon: 'editor',
+                  },
                   action: {
                     open: {
                       frame: 'editor',
@@ -187,6 +208,9 @@ export const directoryTree: Directory = {
                 },
                 {
                   name: '紹介ポスター.ai',
+                  icon: {
+                    icon: 'path',
+                  },
                   action: {
                     open: {
                       frame: 'drawer',
@@ -196,6 +220,9 @@ export const directoryTree: Directory = {
                 },
                 {
                   name: '架空大会ポスター.ai',
+                  icon: {
+                    icon: 'path',
+                  },
                   action: {
                     open: {
                       frame: 'drawer',
@@ -210,6 +237,9 @@ export const directoryTree: Directory = {
               children: [
                 {
                   name: '紹介動画.mp4',
+                  icon: {
+                    icon: 'editor',
+                  },
                   action: {
                     open: {
                       frame: 'editor',
@@ -219,6 +249,9 @@ export const directoryTree: Directory = {
                 },
                 {
                   name: '紹介ポスター.ai',
+                  icon: {
+                    icon: 'path',
+                  },
                   action: {
                     open: {
                       frame: 'drawer',
@@ -228,6 +261,9 @@ export const directoryTree: Directory = {
                 },
                 {
                   name: '架空大会ポスター.ai',
+                  icon: {
+                    icon: 'path',
+                  },
                   action: {
                     open: {
                       frame: 'drawer',
@@ -242,6 +278,9 @@ export const directoryTree: Directory = {
               children: [
                 {
                   name: '紹介動画.mp4',
+                  icon: {
+                    icon: 'editor',
+                  },
                   action: {
                     open: {
                       frame: 'editor',
@@ -251,6 +290,9 @@ export const directoryTree: Directory = {
                 },
                 {
                   name: '紹介ポスター.ai',
+                  icon: {
+                    icon: 'path',
+                  },
                   action: {
                     open: {
                       frame: 'drawer',
@@ -260,6 +302,9 @@ export const directoryTree: Directory = {
                 },
                 {
                   name: '架空大会ポスター.ai',
+                  icon: {
+                    icon: 'path',
+                  },
                   action: {
                     open: {
                       frame: 'drawer',
@@ -274,6 +319,9 @@ export const directoryTree: Directory = {
               children: [
                 {
                   name: '紹介動画.mp4',
+                  icon: {
+                    icon: 'editor',
+                  },
                   action: {
                     open: {
                       frame: 'editor',
@@ -283,6 +331,9 @@ export const directoryTree: Directory = {
                 },
                 {
                   name: '紹介ポスター.ai',
+                  icon: {
+                    icon: 'path',
+                  },
                   action: {
                     open: {
                       frame: 'drawer',
@@ -292,6 +343,9 @@ export const directoryTree: Directory = {
                 },
                 {
                   name: '架空大会ポスター.ai',
+                  icon: {
+                    icon: 'path',
+                  },
                   action: {
                     open: {
                       frame: 'drawer',
@@ -306,6 +360,9 @@ export const directoryTree: Directory = {
               children: [
                 {
                   name: '紹介動画.mp4',
+                  icon: {
+                    icon: 'editor',
+                  },
                   action: {
                     open: {
                       frame: 'editor',
@@ -315,6 +372,9 @@ export const directoryTree: Directory = {
                 },
                 {
                   name: '紹介ポスター.ai',
+                  icon: {
+                    icon: 'path',
+                  },
                   action: {
                     open: {
                       frame: 'drawer',
@@ -324,6 +384,9 @@ export const directoryTree: Directory = {
                 },
                 {
                   name: '架空大会ポスター.ai',
+                  icon: {
+                    icon: 'path',
+                  },
                   action: {
                     open: {
                       frame: 'drawer',
@@ -338,6 +401,9 @@ export const directoryTree: Directory = {
               children: [
                 {
                   name: '紹介動画.mp4',
+                  icon: {
+                    icon: 'editor',
+                  },
                   action: {
                     open: {
                       frame: 'editor',
@@ -347,6 +413,9 @@ export const directoryTree: Directory = {
                 },
                 {
                   name: '紹介ポスター.ai',
+                  icon: {
+                    icon: 'path',
+                  },
                   action: {
                     open: {
                       frame: 'drawer',
@@ -356,6 +425,9 @@ export const directoryTree: Directory = {
                 },
                 {
                   name: '架空大会ポスター.ai',
+                  icon: {
+                    icon: 'path',
+                  },
                   action: {
                     open: {
                       frame: 'drawer',
@@ -370,6 +442,9 @@ export const directoryTree: Directory = {
               children: [
                 {
                   name: '紹介動画.mp4',
+                  icon: {
+                    icon: 'editor',
+                  },
                   action: {
                     open: {
                       frame: 'editor',
@@ -379,6 +454,9 @@ export const directoryTree: Directory = {
                 },
                 {
                   name: '紹介ポスター.ai',
+                  icon: {
+                    icon: 'path',
+                  },
                   action: {
                     open: {
                       frame: 'drawer',
@@ -388,6 +466,9 @@ export const directoryTree: Directory = {
                 },
                 {
                   name: '架空大会ポスター.ai',
+                  icon: {
+                    icon: 'path',
+                  },
                   action: {
                     open: {
                       frame: 'drawer',
@@ -402,6 +483,9 @@ export const directoryTree: Directory = {
               children: [
                 {
                   name: '紹介動画.mp4',
+                  icon: {
+                    icon: 'editor',
+                  },
                   action: {
                     open: {
                       frame: 'editor',
@@ -411,6 +495,9 @@ export const directoryTree: Directory = {
                 },
                 {
                   name: '架空大会ポスター.ai',
+                  icon: {
+                    icon: 'path',
+                  },
                   action: {
                     open: {
                       frame: 'drawer',
@@ -425,6 +512,9 @@ export const directoryTree: Directory = {
               children: [
                 {
                   name: '紹介動画.mp4',
+                  icon: {
+                    icon: 'editor',
+                  },
                   action: {
                     open: {
                       frame: 'editor',
@@ -434,6 +524,9 @@ export const directoryTree: Directory = {
                 },
                 {
                   name: '紹介ポスター.ai',
+                  icon: {
+                    icon: 'path',
+                  },
                   action: {
                     open: {
                       frame: 'drawer',
@@ -443,6 +536,9 @@ export const directoryTree: Directory = {
                 },
                 {
                   name: '架空大会ポスター.ai',
+                  icon: {
+                    icon: 'path',
+                  },
                   action: {
                     open: {
                       frame: 'drawer',
@@ -462,6 +558,9 @@ export const directoryTree: Directory = {
               children: [
                 {
                   name: '紹介ポスター.ai',
+                  icon: {
+                    icon: 'path',
+                  },
                   action: {
                     open: {
                       frame: 'drawer',
@@ -488,6 +587,9 @@ export const directoryTree: Directory = {
               children: [
                 {
                   name: '紹介ポスター.ai',
+                  icon: {
+                    icon: 'path',
+                  },
                   action: {
                     open: {
                       frame: 'drawer',
@@ -514,6 +616,9 @@ export const directoryTree: Directory = {
               children: [
                 {
                   name: '紹介ポスター.ai',
+                  icon: {
+                    icon: 'path',
+                  },
                   action: {
                     open: {
                       frame: 'drawer',
@@ -540,6 +645,9 @@ export const directoryTree: Directory = {
               children: [
                 {
                   name: '紹介ポスター.ai',
+                  icon: {
+                    icon: 'path',
+                  },
                   action: {
                     open: {
                       frame: 'drawer',
@@ -566,6 +674,9 @@ export const directoryTree: Directory = {
               children: [
                 {
                   name: '紹介ポスター.ai',
+                  icon: {
+                    icon: 'path',
+                  },
                   action: {
                     open: {
                       frame: 'drawer',
@@ -592,6 +703,9 @@ export const directoryTree: Directory = {
               children: [
                 {
                   name: '紹介ポスター.ai',
+                  icon: {
+                    icon: 'path',
+                  },
                   action: {
                     open: {
                       frame: 'drawer',
@@ -618,6 +732,9 @@ export const directoryTree: Directory = {
               children: [
                 {
                   name: '紹介ポスター.ai',
+                  icon: {
+                    icon: 'path',
+                  },
                   action: {
                     open: {
                       frame: 'drawer',
@@ -644,6 +761,9 @@ export const directoryTree: Directory = {
               children: [
                 {
                   name: '紹介ポスター.ai',
+                  icon: {
+                    icon: 'path',
+                  },
                   action: {
                     open: {
                       frame: 'drawer',
@@ -677,6 +797,9 @@ export const directoryTree: Directory = {
           children: [
             {
               name: '会場案内.ai',
+              icon: {
+                icon: 'path',
+              },
               action: {
                 open: {
                   frame: 'drawer',
@@ -686,6 +809,9 @@ export const directoryTree: Directory = {
             },
             {
               name: 'ポスター.ai',
+              icon: {
+                icon: 'path',
+              },
               action: {
                 open: {
                   frame: 'drawer',
@@ -700,6 +826,9 @@ export const directoryTree: Directory = {
           children: [
             {
               name: '作品紹介動画.mp4',
+              icon: {
+                icon: 'editor',
+              },
               action: {
                 open: {
                   frame: 'editor',
@@ -709,6 +838,9 @@ export const directoryTree: Directory = {
             },
             {
               name: 'ポスター.ai',
+              icon: {
+                icon: 'path',
+              },
               action: {
                 open: {
                   frame: 'drawer',
@@ -718,6 +850,9 @@ export const directoryTree: Directory = {
             },
             {
               name: '配布カード.ai',
+              icon: {
+                icon: 'path',
+              },
               action: {
                 open: {
                   frame: 'drawer',
@@ -740,6 +875,9 @@ export const directoryTree: Directory = {
     },
     {
       name: 'バイト 作業用.ai',
+      icon: {
+        icon: 'path',
+      },
       action: {
         open: {
           frame: 'drawer',
