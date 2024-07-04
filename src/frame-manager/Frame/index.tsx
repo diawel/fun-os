@@ -9,6 +9,7 @@ type FrameProps = {
   onClose: () => void
   onMove: (position: { x: number; y: number }) => void
   backgroundColor?: string
+  priority: number
 }
 
 const Frame = ({
@@ -19,6 +20,7 @@ const Frame = ({
   onClose,
   onMove,
   backgroundColor = '#fff',
+  priority,
 }: FrameProps) => {
   const [dragState, setDragState] = useState<
     | {
@@ -74,6 +76,7 @@ const Frame = ({
         left: `${position.x * 100}%`,
         top: `${position.y * 100}%`,
         backgroundColor,
+        zIndex: priority,
       }}
       className={styles.frame[state]}
       onClick={onFocus}
