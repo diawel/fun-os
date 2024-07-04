@@ -1,5 +1,9 @@
 export const fileList = {
   '展示会/FUN!tasista! 2024.2/ポスター.ai': '/file-contents/ai/funtasista.png',
+  '展示会/FUN!tasista! 2024.2/配布カード.ai':
+    '/file-contents/ai/funtasista-card.png',
+  '展示会/のび 2023.7/ポスター.ai': '/file-contents/ai/nobi.png',
+  '展示会/のび 2023.7/会場案内.ai': '/file-contents/ai/nobi-kaijo.png',
   '授業/情報デザインⅠ/MIKKE MIHARA to MIRAI/印刷用.ai':
     '/file-contents/ai/mikkemihara.png',
   '授業/情報デザインⅠ/SHIKIRI/印刷用.ai': '/file-contents/ai/shikiri.png',

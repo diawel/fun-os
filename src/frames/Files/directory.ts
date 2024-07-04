@@ -524,7 +524,26 @@ export const directoryTree: Directory = {
       children: [
         {
           name: 'のび 2023.7',
-          children: [],
+          children: [
+            {
+              name: '会場案内.ai',
+              action: {
+                open: {
+                  frame: 'drawer',
+                  params: 'path',
+                },
+              },
+            },
+            {
+              name: 'ポスター.ai',
+              action: {
+                open: {
+                  frame: 'drawer',
+                  params: 'path',
+                },
+              },
+            },
+          ],
         },
         {
           name: 'FUN!tasista! 2024.2',
@@ -540,6 +559,15 @@ export const directoryTree: Directory = {
             },
             {
               name: 'ポスター.ai',
+              action: {
+                open: {
+                  frame: 'drawer',
+                  params: 'path',
+                },
+              },
+            },
+            {
+              name: '配布カード.ai',
               action: {
                 open: {
                   frame: 'drawer',
