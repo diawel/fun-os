@@ -5,22 +5,22 @@ import browser from './browser.png'
 import drawer from './drawer.png'
 import finder from './finder.png'
 import player from './player.png'
-import preview from './preview.png'
+import pdf from './pdf.png'
 import trashBox from './trashBox.png'
 import photo from './photo.png'
 import editor from './editor.png'
 
 const icons = {
-  folder: folder,
-  ordinaryFile: ordinaryFile,
-  browser: browser,
-  drawer: drawer,
-  finder: finder,
-  player: player,
-  preview: preview,
-  trashBox: trashBox,
-  photo: photo,
-  editor: editor,
+  folder,
+  ordinaryFile,
+  browser,
+  drawer,
+  finder,
+  player,
+  pdf,
+  trashBox,
+  photo,
+  editor,
 }
 
 type IconProps = {

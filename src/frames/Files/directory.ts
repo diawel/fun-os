@@ -31,6 +31,9 @@ export const directoryTree: Directory = {
               children: [
                 {
                   name: '印刷用.ai',
+                  icon: {
+                    icon: 'drawer',
+                  },
                   action: {
                     open: {
                       frame: 'drawer',
@@ -40,9 +43,12 @@ export const directoryTree: Directory = {
                 },
                 {
                   name: 'フィールドノート.pdf',
+                  icon: {
+                    icon: 'pdf',
+                  },
                   action: {
                     open: {
-                      frame: 'browser',
+                      frame: 'pdf',
                       params: 'path',
                     },
                   },
@@ -54,6 +60,9 @@ export const directoryTree: Directory = {
               children: [
                 {
                   name: '印刷用.ai',
+                  icon: {
+                    icon: 'drawer',
+                  },
                   action: {
                     open: {
                       frame: 'drawer',
@@ -63,9 +72,12 @@ export const directoryTree: Directory = {
                 },
                 {
                   name: 'フィールドノート.pdf',
+                  icon: {
+                    icon: 'pdf',
+                  },
                   action: {
                     open: {
-                      frame: 'browser',
+                      frame: 'pdf',
                       params: 'path',
                     },
                   },
@@ -86,9 +98,12 @@ export const directoryTree: Directory = {
                 },
                 {
                   name: 'フィールドノート.pdf',
+                  icon: {
+                    icon: 'pdf',
+                  },
                   action: {
                     open: {
-                      frame: 'browser',
+                      frame: 'pdf',
                       params: 'path',
                     },
                   },
@@ -109,9 +124,12 @@ export const directoryTree: Directory = {
                 },
                 {
                   name: 'フィールドノート.pdf',
+                  icon: {
+                    icon: 'pdf',
+                  },
                   action: {
                     open: {
-                      frame: 'browser',
+                      frame: 'pdf',
                       params: 'path',
                     },
                   },
@@ -453,9 +471,12 @@ export const directoryTree: Directory = {
                 },
                 {
                   name: '紹介スライド.pdf',
+                  icon: {
+                    icon: 'pdf',
+                  },
                   action: {
                     open: {
-                      frame: 'browser',
+                      frame: 'pdf',
                       params: 'path',
                     },
                   },
@@ -476,9 +497,12 @@ export const directoryTree: Directory = {
                 },
                 {
                   name: '紹介スライド.pdf',
+                  icon: {
+                    icon: 'pdf',
+                  },
                   action: {
                     open: {
-                      frame: 'browser',
+                      frame: 'pdf',
                       params: 'path',
                     },
                   },
@@ -499,9 +523,12 @@ export const directoryTree: Directory = {
                 },
                 {
                   name: '紹介スライド.pdf',
+                  icon: {
+                    icon: 'pdf',
+                  },
                   action: {
                     open: {
-                      frame: 'browser',
+                      frame: 'pdf',
                       params: 'path',
                     },
                   },
@@ -522,9 +549,12 @@ export const directoryTree: Directory = {
                 },
                 {
                   name: '紹介スライド.pdf',
+                  icon: {
+                    icon: 'pdf',
+                  },
                   action: {
                     open: {
-                      frame: 'browser',
+                      frame: 'pdf',
                       params: 'path',
                     },
                   },
@@ -545,9 +575,12 @@ export const directoryTree: Directory = {
                 },
                 {
                   name: '紹介スライド.pdf',
+                  icon: {
+                    icon: 'pdf',
+                  },
                   action: {
                     open: {
-                      frame: 'browser',
+                      frame: 'pdf',
                       params: 'path',
                     },
                   },
@@ -568,9 +601,12 @@ export const directoryTree: Directory = {
                 },
                 {
                   name: '紹介スライド.pdf',
+                  icon: {
+                    icon: 'pdf',
+                  },
                   action: {
                     open: {
-                      frame: 'browser',
+                      frame: 'pdf',
                       params: 'path',
                     },
                   },
@@ -591,9 +627,12 @@ export const directoryTree: Directory = {
                 },
                 {
                   name: '紹介スライド.pdf',
+                  icon: {
+                    icon: 'pdf',
+                  },
                   action: {
                     open: {
-                      frame: 'browser',
+                      frame: 'pdf',
                       params: 'path',
                     },
                   },
@@ -614,9 +653,12 @@ export const directoryTree: Directory = {
                 },
                 {
                   name: '紹介スライド.pdf',
+                  icon: {
+                    icon: 'pdf',
+                  },
                   action: {
                     open: {
-                      frame: 'browser',
+                      frame: 'pdf',
                       params: 'path',
                     },
                   },
@@ -648,15 +690,6 @@ export const directoryTree: Directory = {
                 open: {
                   frame: 'drawer',
                   params: 'path',
-                },
-              },
-            },
-            {
-              name: 'Webサイト.webloc',
-              action: {
-                open: {
-                  frame: 'browser',
-                  params: ['https://fundesign.jp/miraiten2024w'],
                 },
               },
             },
