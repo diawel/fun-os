@@ -88,16 +88,53 @@ const Files: FrameContent = ({ params }) => {
                 <EntityButton
                   icon={
                     <Icon
-                      {...(child.icon
-                        ? child.icon.icon === 'path'
-                          ? {
+                      // {...(child.icon
+                      //   ? child.icon.icon === 'path'
+                      //     ? {
+                      //         ...child.icon,
+                      //         icon: [...params, child.name].join('/'),
+                      //       }
+                      //     : child.icon
+                      //   : {
+                      //       icon: 'ordinaryFile',
+                      //     })}
+                      {...(() => {
+                        if (child.icon) {
+                          if (child.icon.icon === 'path') {
+                            return {
                               ...child.icon,
                               icon: [...params, child.name].join('/'),
                             }
-                          : child.icon
-                        : {
-                            icon: 'ordinaryFile',
-                          })}
+                          }
+                          if (
+                            child.icon.icon === 'editor' ||
+                            child.icon.icon === 'drawer'
+                          ) {
+                            if (
+                              (window.localStorage.getItem('TEST') === 'A' &&
+                                !test.includes(
+                                  [...params, child.name].join('/')
+                                )) ||
+                              (window.localStorage.getItem('TEST') === 'B' &&
+                                test.includes(
+                                  [...params, child.name].join('/')
+                                ))
+                            ) {
+                              return {
+                                ...child.icon,
+                                icon:
+                                  child.icon.icon === 'editor'
+                                    ? 'player'
+                                    : 'preview',
+                              }
+                            }
+                          }
+                          return child.icon
+                        }
+                        return {
+                          icon: 'ordinaryFile',
+                        }
+                      })()}
                       size={72}
                     />
                   }
@@ -107,31 +144,21 @@ const Files: FrameContent = ({ params }) => {
                       child.action.open.frame === 'editor' ||
                       child.action.open.frame === 'drawer'
                     ) {
-                      if (window.localStorage.getItem('TEST') === 'A') {
-                        if (!test.includes([...params, child.name].join('/'))) {
-                          open(
-                            child.action.open.frame === 'editor'
-                              ? 'player'
-                              : 'preview',
-                            child.action.open.params === 'path'
-                              ? [...params, child.name]
-                              : child.action.open.params
-                          )
-                          return
-                        }
-                      }
-                      if (window.localStorage.getItem('TEST') === 'B') {
-                        if (test.includes([...params, child.name].join('/'))) {
-                          open(
-                            child.action.open.frame === 'editor'
-                              ? 'player'
-                              : 'preview',
-                            child.action.open.params === 'path'
-                              ? [...params, child.name]
-                              : child.action.open.params
-                          )
-                          return
-                        }
+                      if (
+                        (window.localStorage.getItem('TEST') === 'A' &&
+                          !test.includes([...params, child.name].join('/'))) ||
+                        (window.localStorage.getItem('TEST') === 'B' &&
+                          test.includes([...params, child.name].join('/')))
+                      ) {
+                        open(
+                          child.action.open.frame === 'editor'
+                            ? 'player'
+                            : 'preview',
+                          child.action.open.params === 'path'
+                            ? [...params, child.name]
+                            : child.action.open.params
+                        )
+                        return
                       }
                     }
                     open(
