@@ -61,6 +61,15 @@ export const directoryTree: Directory = {
                     },
                   },
                 },
+                {
+                  name: 'フィールドノート.pdf',
+                  action: {
+                    open: {
+                      frame: 'browser',
+                      params: 'path',
+                    },
+                  },
+                },
               ],
             },
             {
@@ -75,6 +84,15 @@ export const directoryTree: Directory = {
                     },
                   },
                 },
+                {
+                  name: 'フィールドノート.pdf',
+                  action: {
+                    open: {
+                      frame: 'browser',
+                      params: 'path',
+                    },
+                  },
+                },
               ],
             },
             {
@@ -85,6 +103,15 @@ export const directoryTree: Directory = {
                   action: {
                     open: {
                       frame: 'drawer',
+                      params: 'path',
+                    },
+                  },
+                },
+                {
+                  name: 'フィールドノート.pdf',
+                  action: {
+                    open: {
+                      frame: 'browser',
                       params: 'path',
                     },
                   },
