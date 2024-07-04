@@ -40,11 +40,11 @@ const Dock = () => {
           <Icon icon="preview" size={72} />
         </div>
       </Open>
-      {/* <Open frame="files"> */}
-      <div className={styles.icon}>
-        <Icon icon="trashBox" size={72} />
-      </div>
-      {/* </Open> */}
+      <Open frame="trash">
+        <div className={styles.icon}>
+          <Icon icon="trashBox" size={72} />
+        </div>
+      </Open>
     </div>
   )
 }

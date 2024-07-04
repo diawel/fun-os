@@ -17,6 +17,8 @@ import { previewValidator } from './frames/Preview/validator'
 import Browser from './frames/Browser'
 import { browserValidator } from './frames/Browser/validator'
 import Desktop from './frame-manager/Desktop'
+import Trash from './frames/Trash'
+import { trashValidator } from './frames/Trash/validator'
 
 const App = () => {
   const style = {
@@ -61,6 +63,10 @@ const App = () => {
           browser: {
             frame: Browser,
             validator: browserValidator,
+          },
+          trash: {
+            frame: Trash,
+            validator: trashValidator,
           },
         }}
       >

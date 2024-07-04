@@ -31,11 +31,8 @@ export const contentCardData: ContentCardDataProps[] = [
     subjectDescription:
       '2年前期には、大学近くの住宅街を歩きながら、デザインの手がかりを見つける課題に取り組みます。\n普段何気なく見ている景色から、新たな着想を得る方法を実践します。',
     imagePath: Image2,
-    buttonLabel: ['成果物を見る', '作業データを見る'],
-    buttonAction: [
-      { frame: 'photos', params: ['「のび」'] }, // wip
-      { frame: 'files', params: ['授業', '情報デザインⅠ'] },
-    ],
+    buttonLabel: ['作業データを見る'],
+    buttonAction: [{ frame: 'files', params: ['授業', '情報デザインⅠ'] }],
   },
   {
     subjectName: '展示会',
@@ -43,11 +40,8 @@ export const contentCardData: ContentCardDataProps[] = [
     subjectDescription:
       '2年前期の終わりには、学生が主体となって、これまでの成果物の展示会を行います。\n外部の方に作品にご覧いただくための会場作りを経験します。',
     imagePath: Image3,
-    buttonLabel: ['展示会の様子を見る', '作業データを見る'],
-    buttonAction: [
-      { frame: '', params: [] }, // wip
-      { frame: 'files', params: ['展示会', 'のび 202023.7'] },
-    ],
+    buttonLabel: ['展示会の様子を見る'],
+    buttonAction: [{ frame: 'files', params: ['展示会', 'のび 2023.7'] }],
   },
   {
     subjectName: '情報表現基礎Ⅲ',
@@ -64,11 +58,8 @@ export const contentCardData: ContentCardDataProps[] = [
     subjectDescription:
       'この授業では、分析結果を元にして、発案したアイデアを支援者にご覧いただくためのwebサイトを作ります。\nFigmaを使い、見る側の視点での構成や配置などを考えます。',
     imagePath: Image5,
-    buttonLabel: ['成果物を見る', '作業データを見る'],
-    buttonAction: [
-      { frame: 'files', params: ['授業', '情報デザインⅡ'] }, // wip動画一覧が開く想定
-      { frame: 'files', params: ['授業', '情報デザインⅡ'] },
-    ],
+    buttonLabel: ['作業データを見る'],
+    buttonAction: [{ frame: 'files', params: ['授業', '情報デザインⅡ'] }],
   },
   {
     subjectName: '展示会',
