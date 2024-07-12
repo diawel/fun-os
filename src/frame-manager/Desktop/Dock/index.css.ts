@@ -7,7 +7,7 @@ export const dock = style({
   transform: 'translateX(-50%)',
   display: 'flex',
 
-  backgroundColor: 'rdga(255, 255, 255, 0.10)',
+  backgroundColor: 'rgba(255, 255, 255, 0.10)',
   boxShadow:
     '0px 7px 53.8px 0px rgba(0, 0, 0, 0.12), 15px 7px 26.7px 0px rgba(255, 255, 255, 0.54) inset',
   backdropFilter: 'blur(12.850000381469727px)',

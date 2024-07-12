@@ -9,27 +9,42 @@ const Desktop = () => {
 
   return (
     <div className={styles.desktop}>
-      <div className={styles.folderPosition}>
-        <div className={styles.folderLabelColor}>
-          <EntityButton
-            icon={<Icon icon="folder" size={72} />}
-            label="授業"
-            onOpen={() => {
-              open('files', ['授業'])
-            }}
-          />
-          <EntityButton
-            icon={<Icon icon="folder" size={72} />}
-            label="展示会"
-            onOpen={() => {
-              open('files', ['展示会'])
-            }}
-          />
-        </div>
+      <div className={styles.folders}>
+        <EntityButton
+          icon={
+            <div className={styles.iconWrapper}>
+              <Icon icon="folder" size={72} />
+            </div>
+          }
+          label={<div className={styles.textWrapper}>授業</div>}
+          onOpen={() => {
+            open('files', ['授業'])
+          }}
+        />
+        <EntityButton
+          icon={
+            <div className={styles.iconWrapper}>
+              <Icon icon="folder" size={72} />
+            </div>
+          }
+          label={<div className={styles.textWrapper}>展示会</div>}
+          onOpen={() => {
+            open('files', ['展示会'])
+          }}
+        />
+        <EntityButton
+          icon={
+            <div className={styles.iconWrapper}>
+              <Icon icon="バイト 作業用.ai" size={72} />
+            </div>
+          }
+          label={<div className={styles.textWrapper}>バイト 作業用.ai</div>}
+          onOpen={() => {
+            open('drawer', ['バイト 作業用.ai'])
+          }}
+        />
       </div>
-      <div className={styles.dockContainer}>
-        <Dock />
-      </div>
+      <Dock />
     </div>
   )
 }
