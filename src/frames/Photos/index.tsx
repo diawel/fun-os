@@ -5,8 +5,11 @@ import { directoryTree, findDirectory } from './directory'
 import Album from './components/Album'
 import PhotosView from './components/PhotosView'
 
-// import { virtualCreaturePhotoList, NobiPhotoList, funtasistaPhotoList } from './utils'
-import { virtualCreaturePhotoList, funtasistaPhotoList } from './utils'
+import {
+  virtualCreaturePhotoList,
+  NobiPhotoList,
+  funtasistaPhotoList,
+} from './utils'
 
 const Photos: FrameContent = ({ params }) => {
   const { transition } = useFrame()
@@ -43,16 +46,19 @@ const Photos: FrameContent = ({ params }) => {
         </div>
         {currentDirectory?.name === '全ての写真' && (
           <PhotosView
-            imagePathList={virtualCreaturePhotoList.concat(funtasistaPhotoList)}
+            imagePathList={virtualCreaturePhotoList.concat(
+              NobiPhotoList,
+              funtasistaPhotoList
+            )}
           />
         )}
         {currentDirectory?.name === 'アルバム' && <Album />}
         {currentDirectory?.name === '仮想生物' && (
           <PhotosView imagePathList={virtualCreaturePhotoList} />
         )}
-        {/* {currentDirectory?.name === '「のび」' && (
+        {currentDirectory?.name === '「のび」' && (
           <PhotosView imagePathList={NobiPhotoList} />
-        )} */}
+        )}
         {currentDirectory?.name === 'FUN!tasista!' && (
           <PhotosView imagePathList={funtasistaPhotoList} />
         )}
