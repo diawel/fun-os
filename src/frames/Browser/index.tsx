@@ -8,7 +8,16 @@ const Browser: FrameContent = ({ params }) => {
   if (path === 'introduction') return <Introduction />
 
   const src = path in fileList ? fileList[path as keyof typeof fileList] : path
-  return <iframe className={ src.includes('figma.com') ? styles.slide : styles.frame} key={src} {...{ src }} allowFullScreen />
+  return (
+    <iframe
+      className={
+        src.startsWith('https://www.figma.com') ? styles.slide : styles.frame
+      }
+      key={src}
+      {...{ src }}
+      allowFullScreen
+    />
+  )
 }
 
 export default Browser
