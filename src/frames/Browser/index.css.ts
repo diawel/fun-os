@@ -13,3 +13,9 @@ export const frame = style({
     },
   },
 })
+
+export const slide = style({
+  width: '60vw',
+  height: '60vh',
+  border: 'none',
+})
