@@ -19,4 +19,10 @@ export const slide = style({
   height: '60vh',
   border: 'none',
   marginBottom: -8,
+
+  selectors: {
+    [`${navigation}[data-is-dragged="true"] + ${frameContent} > &`]: {
+      pointerEvents: 'none',
+    },
+  },
 })
